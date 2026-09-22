@@ -1,0 +1,31 @@
+.page {
+  position: relative;
+  min-height: 100vh;
+  min-width: 1440px;
+  padding: var(--page-pad);
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    180deg,
+    var(--color-grad-start) 0%,
+    var(--color-grad-mid) 60%,
+    var(--color-grad-end) 90.02%
+  );
+}
+
+.home-content {
+  position: relative;
+  flex: 1 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--content-gap);
+  padding: var(--content-pad-top) 0 0 var(--content-pad-left);
+  min-height: 0;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}

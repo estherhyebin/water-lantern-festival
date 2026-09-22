@@ -1,0 +1,29 @@
+.navigation {
+  padding-left: var(--menu-indent);
+}
+
+.navigation__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--menu-gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation__item a {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  min-width: 112px;
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: var(--color-cream);
+  text-decoration: none;
+  white-space: nowrap;
+}

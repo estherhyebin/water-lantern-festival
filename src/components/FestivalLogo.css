@@ -1,0 +1,11 @@
+.festival-logo {
+  width: 108.061px;
+  height: 82.244px;
+  overflow: clip;
+  flex-shrink: 0;
+}
+
+.festival-logo img {
+  width: 100%;
+  height: 100%;
+}
