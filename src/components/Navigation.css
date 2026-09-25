@@ -11,12 +11,14 @@
   padding: 0;
   list-style: none;
 }
+.navigation__item {
+  min-width: 112px; 
+}
 
 .navigation__item a {
-  display: flex;
+  position: relative; /* required to position the underline */
+  display: inline-flex;
   align-items: center;
-  width: max-content;
-  min-width: 112px;
   font-family: var(--font-serif);
   font-size: 16px;
   font-style: normal;
@@ -24,6 +26,38 @@
   line-height: 20px;
   letter-spacing: 0;
   color: var(--color-cream);
-  text-decoration: none;
+  text-decoration: none; /* prevents default browser underline */
   white-space: nowrap;
+  transform: translateX(0);
+  text-shadow: 0 0 0 transparent;
+  transition:
+    transform 300ms ease-out,
+    text-shadow 300ms ease-out;
+}
+
+.navigation__item a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-cream);
+  /* starts invisible (width 0)*/
+  transform: scaleX(0) scaleY(.8); 
+  /* anchors animation to bottom left corner */
+  transform-origin: left bottom; 
+  /* animates transform instead of opacity */
+  transition: transform 250ms ease-out;
+}
+
+.navigation__item a:hover {
+  transform: translateX(12px);
+  text-shadow:
+    0 0 8px rgba(255, 246, 213, 0.55),
+    0 0 16px rgba(255, 246, 213, 0.28);
+}
+
+.navigation__item a:hover::after {
+  transform: scaleX(1) scaleY(0.8);
 }

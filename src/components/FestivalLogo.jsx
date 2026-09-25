@@ -3,14 +3,14 @@ import './FestivalLogo.css'
 
 function FestivalLogo() {
   return (
-    <div className="festival-logo">
+    <a className="festival-logo" href="/" aria-label="Water Lantern Festival home">
       <img
         src={logoHome}
         alt="Water Lantern Festival"
-        width={108.061}
-        height={82.244}
+        width={100}
+        height={76}
       />
-    </div>
+    </a>
   )
 }
 

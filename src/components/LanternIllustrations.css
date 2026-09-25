@@ -1,43 +1,317 @@
 .lanterns {
   position: absolute;
-  right: 224px;
-  bottom: 167px;
-  width: 243px;
-  height: 226px;
+  right: 16vw;
+  top: 60vh;
+  width: 240px;
+  height: 240px;
   pointer-events: none;
+  z-index: 1;
 }
 
 .lantern {
   position: absolute;
-  overflow: clip;
+  overflow: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+  z-index: 1;
+  will-change: filter;
+  transition:
+    transform 500ms ease-out,
+    filter 280ms ease-out,
+    opacity 280ms ease-out;
+}
+
+.lantern:hover {
+  z-index: 6;
+  transform: translateY(-6px);
+  opacity: 1;
+  animation-play-state: paused;
+  filter:
+    brightness(1.55)
+    saturate(1.25)
+    drop-shadow(0 0 100px rgba(255, 246, 213, 1))
+    drop-shadow(0 0 24px rgba(255, 230, 160, 0.95))
+    drop-shadow(0 0 80px rgba(255, 200, 110, 0.7))
+    drop-shadow(0 0 140px rgba(255, 180, 80, 0.4));
 }
 
 .lantern img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   pointer-events: none;
+  will-change: transform;
 }
 
 .lantern--back {
-  top: 0;
-  left: 126px;
-  width: 117px;
-  height: 120px;
+  bottom: 30%;
+  left: 68%;
+  width: 40%;
+  height: 40%;
   opacity: 0.5;
+  animation: lantern-glow-back 4.7s ease-in-out infinite;
+  animation-delay: -2.3s;
 }
 
 .lantern--mid {
-  top: 23px;
-  left: 0;
-  width: 128px;
-  height: 131px;
+  bottom: 20%;
+  left: 24%;
+  width: 44%;
+  height: 44%;
   opacity: 0.75;
+  animation: lantern-glow-mid 3.6s ease-in-out infinite;
+  animation-delay: -1.1s;
 }
 
 .lantern--front {
-  top: 82px;
-  left: 86px;
-  width: 141px;
-  height: 144px;
+  bottom: 0%;
+  left: 50%;
+  width: 48%;
+  height: 48%;
+  animation: lantern-glow-front 7.2s ease-in-out infinite;
+  animation-delay: -3.8s;
+}
+
+.lantern--back:hover,
+.lantern--mid:hover,
+.lantern--front:hover {
+  opacity: 1;
+  animation-play-state: paused;
+}
+
+.lantern--front:hover {
+  filter:
+    brightness(1.85)
+    saturate(1.4)
+    drop-shadow(0 0 14px rgba(255, 250, 230, 1))
+    drop-shadow(0 0 32px rgba(255, 236, 180, 1))
+    drop-shadow(0 0 64px rgba(255, 210, 120, 0.9))
+    drop-shadow(0 0 110px rgba(255, 180, 80, 0.55));
+}
+
+.lantern--mid img {
+  animation: lantern-float-mid 12s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  animation-delay: -4.1s;
+}
+
+.lantern--back img {
+  animation: lantern-float-back 14.5s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  animation-delay: -8.6s;
+}
+
+.lantern--front img {
+  animation: lantern-float-front 16.8s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  animation-delay: -2.2s;
+}
+
+@keyframes lantern-float-mid {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  16% {
+    transform: translate3d(0, -6px, 0);
+  }
+  31% {
+    transform: translate3d(0, -2px, 0);
+  }
+  48% {
+    transform: translate3d(0, -10px, 0);
+  }
+  62% {
+    transform: translate3d(0, -4px, 0);
+  }
+  78% {
+    transform: translate3d(0, -8px, 0);
+  }
+  90% {
+    transform: translate3d(0, -3px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes lantern-float-back {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  13% {
+    transform: translate3d(0, -8px, 0);
+  }
+  27% {
+    transform: translate3d(0, -3px, 0);
+  }
+  44% {
+    transform: translate3d(0, -13px, 0);
+  }
+  57% {
+    transform: translate3d(0, -5px, 0);
+  }
+  73% {
+    transform: translate3d(0, -11px, 0);
+  }
+  88% {
+    transform: translate3d(0, -4px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes lantern-float-front {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  18% {
+    transform: translate3d(0, -7px, 0);
+  }
+  34% {
+    transform: translate3d(0, -12px, 0);
+  }
+  49% {
+    transform: translate3d(0, -5px, 0);
+  }
+  66% {
+    transform: translate3d(0, -15px, 0);
+  }
+  80% {
+    transform: translate3d(0, -8px, 0);
+  }
+  92% {
+    transform: translate3d(0, -4px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes lantern-glow-mid {
+  0%,
+  100% {
+    filter:
+      drop-shadow(0 0 5px rgba(255, 236, 180, 0.18))
+      drop-shadow(0 0 12px rgba(255, 214, 140, 0.1));
+  }
+  12% {
+    filter:
+      drop-shadow(0 0 9px rgba(255, 236, 180, 0.42))
+      drop-shadow(0 3px 14px rgba(255, 200, 110, 0.22));
+  }
+  18% {
+    filter:
+      drop-shadow(0 0 4px rgba(255, 236, 180, 0.14))
+      drop-shadow(0 0 8px rgba(255, 214, 140, 0.08));
+  }
+  31% {
+    filter:
+      drop-shadow(0 0 11px rgba(255, 236, 180, 0.5))
+      drop-shadow(0 4px 16px rgba(255, 200, 110, 0.28));
+  }
+  47% {
+    filter:
+      drop-shadow(0 0 6px rgba(255, 236, 180, 0.22))
+      drop-shadow(0 0 10px rgba(255, 214, 140, 0.12));
+  }
+  58% {
+    filter:
+      drop-shadow(0 0 8px rgba(255, 236, 180, 0.36))
+      drop-shadow(0 3px 13px rgba(255, 200, 110, 0.2));
+  }
+  64% {
+    filter:
+      drop-shadow(0 0 3px rgba(255, 236, 180, 0.12))
+      drop-shadow(0 0 7px rgba(255, 214, 140, 0.06));
+  }
+  79% {
+    filter:
+      drop-shadow(0 0 10px rgba(255, 236, 180, 0.46))
+      drop-shadow(0 4px 15px rgba(255, 200, 110, 0.24));
+  }
+}
+
+@keyframes lantern-glow-back {
+  0%,
+  100% {
+    filter:
+      drop-shadow(0 0 4px rgba(255, 236, 180, 0.16))
+      drop-shadow(0 0 10px rgba(255, 214, 140, 0.08));
+  }
+  9% {
+    filter:
+      drop-shadow(0 0 7px rgba(255, 236, 180, 0.32))
+      drop-shadow(0 2px 12px rgba(255, 200, 110, 0.16));
+  }
+  22% {
+    filter:
+      drop-shadow(0 0 3px rgba(255, 236, 180, 0.1))
+      drop-shadow(0 0 6px rgba(255, 214, 140, 0.05));
+  }
+  38% {
+    filter:
+      drop-shadow(0 0 10px rgba(255, 236, 180, 0.4))
+      drop-shadow(0 3px 14px rgba(255, 200, 110, 0.22));
+  }
+  51% {
+    filter:
+      drop-shadow(0 0 5px rgba(255, 236, 180, 0.2))
+      drop-shadow(0 0 9px rgba(255, 214, 140, 0.1));
+  }
+  67% {
+    filter:
+      drop-shadow(0 0 8px rgba(255, 236, 180, 0.34))
+      drop-shadow(0 3px 12px rgba(255, 200, 110, 0.18));
+  }
+  83% {
+    filter:
+      drop-shadow(0 0 140px rgba(255, 236, 180, 0.14))
+      drop-shadow(0 0 120px rgba(255, 214, 140, 0.07));
+  }
+}
+
+@keyframes lantern-glow-front {
+  0%,
+  100% {
+    filter:
+      brightness(0.98)
+      drop-shadow(0 0 6px rgba(255, 236, 180, 0.22))
+      drop-shadow(0 0 14px rgba(255, 214, 140, 0.12));
+  }
+  18% {
+    filter:
+      brightness(0.9)
+      drop-shadow(0 0 5px rgba(255, 236, 180, 0.16))
+      drop-shadow(0 0 10px rgba(255, 214, 140, 0.08));
+  }
+  36% {
+    filter:
+      brightness(1.06)
+      drop-shadow(0 0 11px rgba(255, 236, 180, 0.4))
+      drop-shadow(0 4px 16px rgba(255, 200, 110, 0.24));
+  }
+  52% {
+    filter:
+      brightness(0.93)
+      drop-shadow(0 0 6px rgba(255, 236, 180, 0.2))
+      drop-shadow(0 0 11px rgba(255, 214, 140, 0.1));
+  }
+  72% {
+    filter:
+      brightness(1.04)
+      drop-shadow(0 0 10px rgba(255, 236, 180, 0.36))
+      drop-shadow(0 3px 14px rgba(255, 200, 110, 0.2));
+  }
+  88% {
+    filter:
+      brightness(0.95)
+      drop-shadow(0 0 7px rgba(255, 236, 180, 0.24))
+      drop-shadow(0 2px 12px rgba(255, 214, 140, 0.12));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lantern,
+  .lantern img {
+    animation: none;
+    will-change: auto;
+  }
 }

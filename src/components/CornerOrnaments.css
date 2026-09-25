@@ -1,24 +1,35 @@
 .corner-ornaments {
-  position: absolute;
-  inset: var(--page-pad);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: contents;
   pointer-events: none;
 }
 
-.corner-ornaments__row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
+.corner-ornaments__mark {
+  position: fixed;
+  z-index: 2;
+  width: 32px;
+  height: 32px;
+  overflow: clip;
+  pointer-events: none;
 }
 
-.corner-ornaments__mark {
-  width: 40px;
-  height: 40px;
-  overflow: clip;
-  flex-shrink: 0;
+.corner-ornaments__mark--tl {
+  top: 16px;
+  left: 16px;
+}
+
+.corner-ornaments__mark--tr {
+  top: 16px;
+  right: 16px;
+}
+
+.corner-ornaments__mark--bl {
+  bottom: 16px;
+  left: 16px;
+}
+
+.corner-ornaments__mark--br {
+  bottom: 16px;
+  right: 16px;
 }
 
 .corner-ornaments__mark img {

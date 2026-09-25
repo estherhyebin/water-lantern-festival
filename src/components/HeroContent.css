@@ -9,7 +9,8 @@
   font-family: var(--font-serif);
   font-size: 16px;
   font-style: italic;
-  font-weight: 400;
+  font-weight: 100;
+  font-synthesis: none;
   line-height: 24px;
   letter-spacing: 0;
   color: var(--color-cream);

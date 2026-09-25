@@ -3,6 +3,8 @@ import Navigation from './components/Navigation.jsx'
 import HeroContent from './components/HeroContent.jsx'
 import LanternIllustrations from './components/LanternIllustrations.jsx'
 import CornerOrnaments from './components/CornerOrnaments.jsx'
+import AsciiRipple from './components/AsciiRipple.jsx'
+import CursorRipple from './components/CursorRipple.jsx'
 import './App.css'
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
         <HeroContent />
       </div>
       <LanternIllustrations />
+      <AsciiRipple />
+      <CursorRipple />
     </main>
   )
 }

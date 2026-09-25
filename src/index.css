@@ -1,3 +1,57 @@
+/* regular */
+@font-face {
+  font-family: 'Louize Trial';
+  src: url('./assets/fonts/LouizeTrial-Regular.otf') format('otf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* regular italic */
+@font-face {
+  font-family: 'Louize Trial';
+  src: url('./assets/fonts/LouizeTrial-Italic.otf') format('otf');
+  font-weight: 400;      
+  font-style: italic;     
+  font-display: swap;
+}
+
+/* medium */
+@font-face {
+  font-family: 'Louize Trial';
+  src: url('./assets/fonts/LouizeTrial-Medium.otf') format('otf');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* medium italic */
+@font-face {
+  font-family: 'Louize Trial';
+  src: url('./assets/fonts/LouizeTrial-MediumItalic.otf') format('otf');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* bold */
+@font-face {
+  font-family: 'Louize Trial';
+  src: url('./assets/fonts/LouizeTrial-Bold.otf') format('otf');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* bold italic */
+@font-face {
+  font-family: 'Louize Trial';
+  src: url('./assets/fonts/LouizeTrial-BoldItalic.otf') format('otf');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
 :root {
   --color-cream: #fff6d5;
   --color-grad-start: #44617b;
@@ -6,10 +60,10 @@
   --font-serif: 'Louize Trial', 'Cormorant Garamond', Georgia, 'Times New Roman',
     serif;
   --page-pad: 20px;
-  --content-pad-top: 164px;
-  --content-pad-left: 236px;
-  --content-gap: 120px;
-  --menu-indent: 118px;
+  --content-pad-top: 10vh;
+  --content-pad-left: 12vw;
+  --content-gap: 96px;
+  --menu-indent: 112px;
   --menu-gap: 12px;
 }
 
@@ -23,11 +77,14 @@ html,
 body,
 #root {
   margin: 0;
-  min-height: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 body {
   font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 100;
   color: var(--color-cream);
   background: var(--color-grad-end);
 }
@@ -40,3 +97,5 @@ img {
   display: block;
   max-width: none;
 }
+
+
