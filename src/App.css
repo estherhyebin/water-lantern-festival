@@ -32,6 +32,11 @@
   align-items: flex-start;
 }
 
+.page--find {
+  overflow: hidden;
+  padding-bottom: 0;
+}
+
 .ascii-ripple {
   position: fixed;
   inset: 0;

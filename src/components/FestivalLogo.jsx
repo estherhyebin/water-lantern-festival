@@ -1,4 +1,4 @@
-import logoHome from '../assets/figma/logo-home.svg'
+import logoHome from '../assets/figma/water-lantern-logo.svg'
 import './FestivalLogo.css'
 
 function FestivalLogo() {
@@ -7,8 +7,8 @@ function FestivalLogo() {
       <img
         src={logoHome}
         alt="Water Lantern Festival"
-        width={100}
-        height={76}
+        width={110}
+        height={81}
       />
     </a>
   )

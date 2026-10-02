@@ -5,7 +5,7 @@
   width: 240px;
   height: 240px;
   pointer-events: none;
-  z-index: 1;
+  z-index: 3;
 }
 
 .lantern {
@@ -25,7 +25,7 @@
   z-index: 6;
   transform: translateY(-6px);
   opacity: 1;
-  animation-play-state: paused;
+  animation: none;
   filter:
     brightness(1.55)
     saturate(1.25)
@@ -76,7 +76,7 @@
 .lantern--mid:hover,
 .lantern--front:hover {
   opacity: 1;
-  animation-play-state: paused;
+  animation: none;
 }
 
 .lantern--front:hover {
@@ -102,6 +102,46 @@
 .lantern--front img {
   animation: lantern-float-front 16.8s cubic-bezier(0.37, 0, 0.63, 1) infinite;
   animation-delay: -2.2s;
+}
+
+.lanterns--find {
+  position: fixed;
+  inset: 0;
+  width: auto;
+  height: auto;
+  pointer-events: none;
+}
+
+.lanterns--find .lantern {
+  pointer-events: none;
+}
+
+.lanterns--find .lantern--back {
+  top: auto;
+  bottom: 18vh;
+  left: auto;
+  right: 8vw;
+  width: 117px;
+  height: 120px;
+  opacity: 0.75;
+}
+
+.lanterns--find .lantern--front {
+  top: auto;
+  bottom: 12vh;
+  left: auto;
+  right: 3vw;
+  width: 128px;
+  height: 131px;
+}
+
+@media (max-width: 900px) {
+  .lanterns--find .lantern--back,
+  .lanterns--find .lantern--front {
+    width: 88px;
+    height: 90px;
+    opacity: 0.45;
+  }
 }
 
 @keyframes lantern-float-mid {

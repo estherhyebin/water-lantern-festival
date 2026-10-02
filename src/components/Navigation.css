@@ -58,6 +58,11 @@
     0 0 16px rgba(255, 246, 213, 0.28);
 }
 
-.navigation__item a:hover::after {
+.navigation__item a:hover::after,
+.navigation__item a.is-active::after {
   transform: scaleX(1) scaleY(0.8);
+}
+
+.navigation__item a.is-active {
+  text-shadow: 0.25px 0.25px 4px #fff9e3;
 }

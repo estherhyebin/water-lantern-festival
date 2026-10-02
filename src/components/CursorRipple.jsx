@@ -7,9 +7,9 @@ const DRAG_SPACING = 38
 const LISTENER_OPTS = { capture: true }
 
 const CURSOR_WAVE = {
-  lifetime: 4,
+  lifetime: 2,
   scale: 0.75,
-  fadeStart: 0.25,
+  fadeStart: 0.12,
   opacity: 190,
   flatten: 0.19,
 }

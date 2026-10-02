@@ -1,0 +1,341 @@
+.find-event {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.find-event__main {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: flex-start;
+  gap: min(126px, 8vw);
+  min-height: 0;
+  width: 100%;
+  padding: var(--content-pad-top) 0 0 var(--content-pad-left);
+  overflow: hidden;
+}
+
+.find-event__browser {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);
+  align-self: stretch;
+  width: min(440px, 100%);
+  min-height: 0;
+  overflow: hidden;
+}
+
+.event-search {
+  display: flex;
+  align-items: center;
+  width: 254px;
+  padding: 8px 16px 8px 4px;
+  border-bottom: 1px solid rgba(255, 246, 213, 0.25);
+  border-radius: 2px;
+  background: linear-gradient(
+    180deg,
+    var(--color-grad-start) 0%,
+    var(--color-grad-mid) 60%,
+    var(--color-grad-end) 90.02%
+  );
+  background-attachment: fixed;
+}
+
+.find-event__browser .event-search {
+  grid-area: 1 / 1;
+  align-self: start;
+  z-index: 2;
+  width: min(254px, 100%);
+}
+
+.event-search__input {
+  width: 100%;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.35;
+  font-style: normal;
+  color: var(--color-cream);
+  outline: none;
+}
+
+.event-search__input::-webkit-search-cancel-button,
+.event-search__input::-webkit-search-decoration,
+.event-search__input::-webkit-search-results-button,
+.event-search__input::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+
+.event-search__input::placeholder {
+  color: rgba(255, 246, 213, 0.5);
+}
+
+.find-event__list {
+  --find-list-gap: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  grid-area: 1 / 1;
+  width: max-content;
+  min-width: 200px;
+  max-width: 440px;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-top: calc(17px + 1.35 * 16px + var(--find-list-gap));
+  padding-right: 48px;
+  padding-bottom: 120px;
+  scrollbar-width: none;
+}
+
+.find-event__list::-webkit-scrollbar {
+  display: none;
+}
+
+.find-row {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 100;
+  font-synthesis: none;
+  line-height: 1.35;
+  letter-spacing: 0;
+  color: var(--color-cream);
+  text-align: left;
+  cursor: pointer;
+  transform: translateX(0);
+  text-shadow: 0 0 0 transparent;
+  transition:
+    transform 300ms ease-out,
+    text-shadow 300ms ease-out;
+}
+
+button.find-row:hover {
+  transform: translateX(12px);
+  text-shadow:
+    0 0 8px rgba(255, 246, 213, 0.55),
+    0 0 16px rgba(255, 246, 213, 0.28);
+}
+
+.find-row--expanded {
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  text-shadow: 0.25px 0.25px 4px #fff9e3;
+}
+
+button.find-row.find-row--expanded:hover {
+  transform: none;
+  text-shadow: 0.25px 0.25px 4px #fff9e3;
+}
+
+.find-row--active {
+  font-weight: 500;
+  text-shadow: 0.25px 0.25px 4px #fff9e3;
+}
+
+.find-state {
+  width: 100%;
+  padding-left: 0;
+  transition: padding-left 280ms ease;
+}
+
+.find-state--expanded {
+  padding-left: 24px;
+}
+
+.find-row--country.find-row--expanded {
+  padding-left: 24px;
+}
+
+.find-state__cities {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition:
+    grid-template-rows 280ms ease,
+    opacity 220ms ease;
+}
+
+.find-state--expanded .find-state__cities {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.find-state__cities-inner {
+  min-height: 0;
+  overflow: hidden;
+  margin-right: -48px;
+  padding-right: 48px;
+}
+
+.find-row--city {
+  width: max-content;
+  max-width: none;
+  padding-right: 1.6em;
+  white-space: nowrap;
+}
+
+.find-row--city::after {
+  content: '→';
+  display: inline-block;
+  margin-left: 0.4em;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition:
+    opacity 280ms ease-out,
+    transform 280ms ease-out;
+}
+
+button.find-row--city:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.find-state .find-row--city,
+.find-event__group > .find-row--city {
+  padding-left: 24px;
+}
+
+.find-event__list--searching .find-event__group > .find-row--city {
+  padding-left: 48px;
+}
+
+.find-state:not(.find-state--expanded) .find-row--city {
+  pointer-events: none;
+}
+
+.find-event__group + .find-event__group {
+  margin-top: 20px;
+}
+
+.find-row--muted,
+p.find-row {
+  cursor: default;
+  color: rgba(255, 246, 213, 0.7);
+}
+
+.find-row--country {
+  color: var(--color-cream);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+
+p.find-row.find-row--country {
+  color: var(--color-cream);
+}
+
+button.find-row.find-row--muted:hover {
+  transform: none;
+  text-shadow: 0 0 0 transparent;
+}
+
+.find-tickets {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.find-ticket {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.35;
+  color: var(--color-cream);
+}
+
+.find-ticket--unavailable {
+  opacity: 0.55;
+}
+
+.find-ticket__status {
+  text-transform: capitalize;
+}
+
+.find-tickets__cta {
+  margin-top: 12px;
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--color-cream);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-shadow: 0.25px 0.25px 4px #fff9e3;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 900px) {
+  .find-event__main {
+    flex-direction: column;
+    padding: 48px 16px 0;
+    gap: 32px;
+  }
+
+  .find-event__browser {
+    width: min(100%, 400px);
+  }
+
+  .find-event__list {
+    width: 100%;
+  }
+
+  .event-search,
+  .find-tickets {
+    width: 100%;
+  }
+
+  .find-state--expanded,
+  .find-row--country.find-row--expanded {
+    padding-left: 16px;
+  }
+
+  .find-state .find-row--city,
+  .find-event__group > .find-row--city {
+    padding-left: 16px;
+  }
+
+  .find-event__list--searching .find-event__group > .find-row--city {
+    padding-left: 32px;
+  }
+}

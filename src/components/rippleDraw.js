@@ -1,6 +1,16 @@
 const CHARS = '古池や蛙飛び込む水の音'
 const CREAM = { r: 255, g: 241, b: 206 }
 
+/*
+ * How much a character dims when it sits
+ * on another ripple's wave.
+ *
+ * 0   = no extra fade
+ * 0.7 = about 30% opacity at full overlap
+ * 1   = fully invisible at full overlap
+ */
+const OVERLAP_FADE = 0.7
+
 export { CHARS, CREAM }
 
 export function drawRipple(p, ripple, others) {
@@ -44,7 +54,7 @@ export function drawRipple(p, ripple, others) {
 function interfere(p, x, y, ripple, others) {
   let ox = 0
   let oy = 0
-  let glow = 1
+  let overlap = 0
 
   for (const other of others) {
     if (other === ripple) continue
@@ -68,10 +78,14 @@ function interfere(p, x, y, ripple, others) {
 
     ox += (dx / dist) * push
     oy += (dy / dist) * push * other.flatten
-    glow += crest * 0.25
+    overlap = Math.max(overlap, crest)
   }
 
-  return { x: x + ox, y: y + oy, glow }
+  return {
+    x: x + ox,
+    y: y + oy,
+    overlapFade: 1 - overlap * OVERLAP_FADE,
+  }
 }
 
 function drawWaterRing(p, ripple, rx, ry, opacity, ring, others) {
@@ -106,7 +120,7 @@ function drawWaterRing(p, ripple, rx, ry, opacity, ring, others) {
     const shimmerBrightness = p.map(shimmer, -1, 1, 0.7, 1)
     const positionFade = p.map(Math.abs(p.sin(angle)), 0, 1, 0.95, 0.55)
     const brightness =
-      shimmerBrightness * positionFade * Math.min(point.glow, 1.25)
+      shimmerBrightness * positionFade * point.overlapFade
 
     p.fill(CREAM.r, CREAM.g, CREAM.b, opacity * brightness)
     p.text(char, point.x, point.y)
