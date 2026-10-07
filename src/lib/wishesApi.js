@@ -13,6 +13,19 @@ function mapRow(row) {
   }
 }
 
+function withDefaultWishes(wishes = []) {
+  const seen = new Set(
+    wishes.map((wish) => String(wish.text || '').replace(/\s+/g, ' ').trim().toLowerCase()),
+  )
+  const defaults = SAMPLE_WISHES.filter((wish) => {
+    const text = wish.text.replace(/\s+/g, ' ').trim().toLowerCase()
+    if (seen.has(text)) return false
+    seen.add(text)
+    return true
+  })
+  return [...defaults, ...wishes]
+}
+
 export async function fetchApprovedWishes() {
   if (!supabase) {
     return { wishes: SAMPLE_WISHES, source: 'sample', error: null }
@@ -33,11 +46,12 @@ export async function fetchApprovedWishes() {
     }
   }
 
-  const wishes = (data || []).map(mapRow)
-  if (wishes.length === 0) {
-    return { wishes: SAMPLE_WISHES, source: 'sample', error: null }
+  const wishes = withDefaultWishes((data || []).map(mapRow))
+  return {
+    wishes,
+    source: (data || []).length ? 'mixed' : 'sample',
+    error: null,
   }
-  return { wishes, source: 'database', error: null }
 }
 
 export async function submitWish(rawText) {

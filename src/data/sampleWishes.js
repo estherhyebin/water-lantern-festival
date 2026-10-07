@@ -1,5 +1,4 @@
-// SAMPLE ONLY — shown when the database is empty or not connected.
-// Remove this file from the page once real approved wishes exist.
+// Default wishes shown on the field (local and Vercel), mixed with saved wishes.
 export const SAMPLE_WISHES = [
   {
     id: 'sample-1',

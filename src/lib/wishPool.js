@@ -30,8 +30,13 @@ export function seedSlots(pool) {
   const count = Math.min(ACTIVE_WISH_COUNT, Math.max(pool.length, 0))
   const slots = []
   const used = new Set()
+  const preferred = [
+    ...pool.filter((wish) => wish.sample),
+    ...pool.filter((wish) => !wish.sample),
+  ]
   for (let lane = 0; lane < count; lane += 1) {
-    const wish = pickNextWish(pool, used, [])
+    const wish =
+      preferred.find((item) => !used.has(item.id)) || pickNextWish(pool, used, [])
     if (!wish) break
     used.add(wish.id)
     const progress = 0.08 + ((lane * 0.11) % 0.42)
