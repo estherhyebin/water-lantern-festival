@@ -138,6 +138,7 @@ function todayStamp() {
 function cleanText(value) {
   return String(value || '')
     .replace(/\u00a0/g, ' ')
+    .replace(/[\u200B-\u200D\uFEFF]/g, '')
     .replace(/\s+/g, ' ')
     .trim()
 }
@@ -603,18 +604,55 @@ function extractDatesAndTimes($, jsonLd) {
   return { dates: unique, dateStatus: unique.length ? 'scheduled' : 'unknown' }
 }
 
+function uniqueTextParts(parts, skipValue = null) {
+  const seen = new Set()
+  const skip = skipValue ? cleanText(skipValue).toLowerCase() : null
+  const unique = []
+  for (const part of parts) {
+    const value = cleanText(part)
+    if (!value) continue
+    const key = value.toLowerCase()
+    if (skip && key === skip) continue
+    if (seen.has(key)) continue
+    seen.add(key)
+    unique.push(value)
+  }
+  return unique
+}
+
+function collapseAddress(venue, address) {
+  if (!address) return null
+  const parts = uniqueTextParts(String(address).split(','), venue)
+  return parts.length ? parts.join(', ') : null
+}
+
 function extractLocation($) {
   const lines = sectionLines($, /^location$/i).filter(
     (line) => !/^(location|view on map)$/i.test(line),
   )
   if (!lines.length) return { venue: null, address: null }
   const venue = lines[0] || null
-  const addressLines = lines.slice(1)
-  const address = addressLines.length ? addressLines.join(', ') : null
+  const addressLines = uniqueTextParts(lines.slice(1), venue)
+  const address = collapseAddress(venue, addressLines.join(', '))
   if (venue && /^\d/.test(venue) && !address) {
     return { venue: null, address: venue }
   }
   return { venue, address }
+}
+
+function uniqueSchedule(items) {
+  const seen = new Set()
+  const schedule = []
+  for (const item of items) {
+    const time = cleanText(item?.time)
+    const activity = cleanText(item?.activity)
+    if (!time || !activity) continue
+    const key = `${time.toLowerCase()}|${activity.toLowerCase()}`
+    if (seen.has(key)) continue
+    seen.add(key)
+    schedule.push({ time, activity })
+  }
+  return schedule
 }
 
 function extractSchedule($) {
@@ -633,7 +671,7 @@ function extractSchedule($) {
       i += 1
     }
   }
-  return schedule
+  return uniqueSchedule(schedule)
 }
 
 function extractTicketUrl($, jsonLd, html) {

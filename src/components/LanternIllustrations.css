@@ -135,12 +135,51 @@
   height: 131px;
 }
 
+.lanterns--checkout {
+  z-index: 1;
+}
+
+.lanterns--checkout .lantern--back {
+  left: 3vw;
+  right: auto;
+}
+
+.lanterns--checkout .lantern--front {
+  left: 8vw;
+  right: auto;
+}
+
+.lanterns--wish {
+  z-index: 0;
+}
+
+.lanterns--wish .lantern--back {
+  left: 4vw;
+  right: auto;
+  bottom: 10vh;
+  opacity: 0.42;
+}
+
+.lanterns--wish .lantern--front {
+  left: 10vw;
+  right: auto;
+  bottom: 6vh;
+  opacity: 0.55;
+}
+
 @media (max-width: 900px) {
   .lanterns--find .lantern--back,
   .lanterns--find .lantern--front {
     width: 88px;
     height: 90px;
     opacity: 0.45;
+  }
+
+  .lanterns--checkout .lantern--back,
+  .lanterns--checkout .lantern--front {
+    left: 4vw;
+    right: auto;
+    opacity: 0.32;
   }
 }
 

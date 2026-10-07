@@ -32,9 +32,22 @@
   align-items: flex-start;
 }
 
-.page--find {
+.page--find,
+.page--wish {
   overflow: hidden;
   padding-bottom: 0;
+}
+
+.page--wish {
+  overflow: visible;
+}
+
+.page--wish .write-wish {
+  z-index: 4;
+}
+
+.page--wish .lanterns {
+  display: none;
 }
 
 .ascii-ripple {

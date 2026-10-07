@@ -1,0 +1,204 @@
+.write-wish {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+  overflow: visible;
+  /* Change these two numbers to move the input. Positive X = right, positive Y = down. */
+  --wish-input-offset-x: 0px;
+  --wish-input-offset-y: 0px;
+}
+
+.write-wish__chrome {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex: 1 1 auto;
+  align-items: flex-start;
+  gap: min(126px, 8vw);
+  min-height: 0;
+  width: 100%;
+  padding: var(--content-pad-top) 0 100px var(--content-pad-left);
+  pointer-events: none;
+}
+
+.write-wish__chrome .brand,
+.write-wish__chrome .wish-composer {
+  pointer-events: auto;
+  position: relative;
+  z-index: 6;
+}
+
+.write-wish__chrome .wish-composer {
+  position: relative;
+  z-index: 5;
+}
+
+.wish-composer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 8px;
+  width: min(559px, 100%);
+  margin-top: auto;
+  align-self: stretch;
+  transform: translate(var(--wish-input-offset-x), var(--wish-input-offset-y));
+}
+
+.wish-composer__label,
+.wish-composer__notice,
+.wish-modal__body {
+  margin: 0;
+  color: var(--color-cream);
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.384px;
+  font-synthesis: none;
+}
+
+.wish-composer__row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.wish-composer__input {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 480px;
+  height: 32px;
+  margin: 0;
+  padding: 6px 0;
+  border: 0;
+  border-bottom: 0.8px solid var(--color-cream);
+  border-radius: 0;
+  background: transparent;
+  color: var(--color-cream);
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.384px;
+  font-synthesis: none;
+  outline: none;
+}
+
+.wish-composer__input:focus-visible {
+  border-bottom-color: var(--color-cream);
+  text-shadow:
+    0 0 8px rgba(255, 246, 213, 0.35),
+    0 0 16px rgba(255, 246, 213, 0.18);
+}
+
+.wish-composer__submit,
+.wish-modal__close {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-cream);
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.384px;
+  font-synthesis: none;
+  cursor: pointer;
+  transform: translateX(0);
+  text-shadow: 0 0 0 transparent;
+  transition:
+    transform 300ms ease-out,
+    text-shadow 300ms ease-out;
+}
+
+.wish-composer__submit:hover,
+.wish-composer__submit:focus-visible,
+.wish-modal__close:hover,
+.wish-modal__close:focus-visible {
+  transform: translateX(12px);
+  text-shadow:
+    0 0 8px rgba(255, 246, 213, 0.55),
+    0 0 16px rgba(255, 246, 213, 0.28);
+  outline: none;
+}
+
+.wish-composer__submit:disabled {
+  opacity: 0.55;
+  cursor: default;
+  transform: none;
+  text-shadow: none;
+}
+
+.wish-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(22, 22, 14, 0.42);
+}
+
+.wish-modal__panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  width: min(420px, 100%);
+  padding: 28px 8px;
+  background: linear-gradient(
+    180deg,
+    var(--color-grad-start) 0%,
+    var(--color-grad-mid) 60%,
+    var(--color-grad-end) 90.02%
+  );
+  color: var(--color-cream);
+}
+
+.wish-modal__title {
+  margin: 0;
+  color: var(--color-cream);
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 28px;
+  font-synthesis: none;
+}
+
+@media (max-width: 900px) {
+  .write-wish__chrome {
+    flex-direction: column;
+    padding: 48px 16px 32px;
+    gap: 32px;
+  }
+
+  .wish-composer {
+    width: 100%;
+    max-width: 400px;
+    align-self: flex-start;
+  }
+
+  .wish-composer__row {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .wish-composer__input {
+    max-width: 100%;
+    width: 100%;
+  }
+}

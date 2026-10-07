@@ -1,0 +1,227 @@
+.ticket-checkout,
+.ticket-pay,
+.ticket-confirm {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 40px;
+  width: min(640px, 100%);
+  padding-bottom: 96px;
+}
+
+.ticket-checkout__back,
+.ticket-checkout__go,
+.ticket-pay__submit,
+.ticket-confirm__link {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-cream);
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.384px;
+  font-synthesis: none;
+  text-decoration: none;
+  cursor: pointer;
+  transform: translateX(0);
+  text-shadow: 0 0 0 transparent;
+  transition:
+    transform 300ms ease-out,
+    text-shadow 300ms ease-out;
+}
+
+.ticket-checkout__back:hover,
+.ticket-checkout__go:hover,
+.ticket-pay__submit:hover,
+.ticket-confirm__link:hover,
+.ticket-checkout__back:focus-visible,
+.ticket-checkout__go:focus-visible,
+.ticket-pay__submit:focus-visible,
+.ticket-confirm__link:focus-visible {
+  transform: translateX(12px);
+  text-shadow:
+    0 0 8px rgba(255, 246, 213, 0.55),
+    0 0 16px rgba(255, 246, 213, 0.28);
+  outline: none;
+}
+
+.ticket-checkout__back {
+  gap: 12px;
+  padding: 8px 16px 8px 0;
+  line-height: 1.35;
+  letter-spacing: 0;
+  align-self: flex-start;
+}
+
+.ticket-checkout__back-arrow {
+  width: 6.8003px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.ticket-checkout__when,
+.ticket-offer__name,
+.ticket-offer__price,
+.ticket-pay__heading {
+  margin: 0;
+  color: var(--color-cream);
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  font-synthesis: none;
+}
+
+.ticket-offer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+}
+
+.ticket-offer__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  min-width: 0;
+  max-width: 360px;
+}
+
+.ticket-offer__description,
+.ticket-checkout__total,
+.ticket-checkout__hint,
+.ticket-pay__summary,
+.ticket-pay__label,
+.ticket-confirm__copy {
+  margin: 0;
+  color: var(--color-cream);
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.384px;
+  font-synthesis: none;
+}
+
+.ticket-offer__buy {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.ticket-checkout__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.ticket-checkout__total {
+  display: flex;
+  gap: 8px;
+  font-style: normal;
+}
+
+.ticket-checkout__go--disabled,
+.ticket-checkout__go--disabled:hover,
+.ticket-checkout__go--disabled:focus-visible {
+  transform: none;
+  text-shadow: none;
+  opacity: 0.45;
+  cursor: default;
+}
+
+.ticket-checkout__hint {
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.ticket-pay__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: min(360px, 100%);
+}
+
+.ticket-pay__field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.ticket-pay__label {
+  font-style: italic;
+}
+
+.ticket-pay__input {
+  width: 100%;
+  margin: 0;
+  padding: 6px 0;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 246, 213, 0.45);
+  border-radius: 0;
+  background: transparent;
+  color: var(--color-cream);
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 24px;
+  font-synthesis: none;
+  outline: none;
+}
+
+.ticket-pay__input:focus-visible {
+  border-bottom-color: var(--color-cream);
+  text-shadow:
+    0 0 8px rgba(255, 246, 213, 0.35),
+    0 0 16px rgba(255, 246, 213, 0.18);
+}
+
+.ticket-pay__row {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+}
+
+.ticket-pay__summary {
+  font-style: italic;
+}
+
+.ticket-confirm__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+@media (max-width: 900px) {
+  .ticket-checkout,
+  .ticket-pay,
+  .ticket-confirm {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .ticket-offer {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .ticket-pay__row {
+    flex-direction: column;
+    gap: 16px;
+  }
+}

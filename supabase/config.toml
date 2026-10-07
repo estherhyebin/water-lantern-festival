@@ -1,0 +1,4 @@
+project_id = "water-lantern-festival"
+
+[functions.submit-wish]
+verify_jwt = false

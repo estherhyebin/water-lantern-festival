@@ -1,5 +1,20 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import events from '../data/events.json'
+import {
+  cartTotalCents,
+  emptyQuantities,
+} from '../data/ticketOffers.js'
+import ConfirmationPage from './ConfirmationPage.jsx'
+import EventDetail from './EventDetail.jsx'
+import PaymentPage from './PaymentPage.jsx'
+import TicketCheckout from './TicketCheckout.jsx'
+import {
+  detailHash,
+  listHash,
+  loadCart,
+  parseFindRoute,
+  ticketsHash,
+} from './findRoute.js'
 import './FindEventPage.css'
 
 function clean(value) {
@@ -17,68 +32,8 @@ function matchesCityQuery(value, query) {
   return text.split(/[^a-z0-9]+/).some((word) => word.startsWith(query))
 }
 
-function formatDate(iso) {
-  if (!iso) return 'Date coming soon'
-  const [year, month, day] = iso.split('-').map(Number)
-  if (!year || !month || !day) return 'Date coming soon'
-  return new Date(Date.UTC(year, month - 1, day)).toLocaleDateString('en-US', {
-    month: 'long',
-    day: 'numeric',
-    year: 'numeric',
-    timeZone: 'UTC',
-  })
-}
-
 function hasSetDate(event) {
   return (event.dates || []).some((item) => Boolean(item?.date))
-}
-
-function uniqueDates(event) {
-  const seen = new Set()
-  const dates = []
-  for (const item of event.dates || []) {
-    const iso = item?.date || null
-    if (!iso) continue
-    if (seen.has(iso)) continue
-    seen.add(iso)
-    dates.push({
-      date: iso,
-      startTime: item.startTime || null,
-      endTime: item.endTime || null,
-      dateStatus: item.dateStatus || 'scheduled',
-    })
-  }
-  return dates
-}
-
-function ticketRows(event) {
-  const rows = []
-  for (const ticket of event.tickets || []) {
-    if (Array.isArray(ticket.pricing) && ticket.pricing.length) {
-      for (const price of ticket.pricing) {
-        rows.push({
-          name: ticket.name,
-          tier: price.tier || null,
-          price: price.price ?? null,
-          currency: price.currency || 'USD',
-          status: (price.status || 'available').toLowerCase(),
-        })
-      }
-    } else {
-      rows.push({
-        name: ticket.name,
-        tier: ticket.tier || null,
-        price: ticket.price ?? null,
-        currency: ticket.currency || 'USD',
-        status: (ticket.status || 'available').toLowerCase(),
-      })
-    }
-  }
-  return rows
-}
-
-function isPurchasable(status) {
-  return status === 'available' || status === 'limited'
 }
 
 function EventSearch({ id, value, onChange }) {
@@ -288,8 +243,16 @@ function CountryGroup({
 export default function FindEventPage({ brand }) {
   const [query, setQuery] = useState('')
   const [expandedState, setExpandedState] = useState(null)
-  const [selectedEventId, setSelectedEventId] = useState(null)
-  const [selectedDate, setSelectedDate] = useState(null)
+  const [route, setRoute] = useState(() => parseFindRoute())
+
+  useEffect(() => {
+    function syncFromHash() {
+      setRoute(parseFindRoute())
+    }
+
+    window.addEventListener('hashchange', syncFromHash)
+    return () => window.removeEventListener('hashchange', syncFromHash)
+  }, [])
 
   const usableEvents = useMemo(
     () =>
@@ -305,10 +268,36 @@ export default function FindEventPage({ brand }) {
     [usableEvents],
   )
 
-  const selectedEvent = usableEvents.find((event) => event.id === selectedEventId) || null
-  const eventDates = selectedEvent ? uniqueDates(selectedEvent) : []
-  const tickets = selectedEvent ? ticketRows(selectedEvent) : []
+  const selectedEvent =
+    usableEvents.find((event) => event.id === route.eventId) || null
+  const selectedDate = (selectedEvent?.dates || []).find(
+    (item) => item.date === route.date,
+  )
+  const quantities = useMemo(() => {
+    if (!selectedEvent || !route.date) return emptyQuantities()
+    if (route.view === 'list' || route.view === 'detail') return emptyQuantities()
+    return loadCart(selectedEvent.id, route.date) || emptyQuantities()
+  }, [selectedEvent, route.date, route.view])
   const normalizedQuery = query.trim().toLowerCase()
+
+  useEffect(() => {
+    if (route.eventId && !selectedEvent) {
+      window.location.hash = listHash()
+    }
+  }, [route.eventId, selectedEvent])
+
+  useEffect(() => {
+    if (!selectedEvent || !route.date) return
+    if (!selectedDate) {
+      window.location.hash = detailHash(selectedEvent.id)
+      return
+    }
+    if (route.view !== 'pay' && route.view !== 'confirm') return
+    const cart = loadCart(selectedEvent.id, route.date) || emptyQuantities()
+    if (cartTotalCents(cart) <= 0) {
+      window.location.hash = ticketsHash(selectedEvent.id, route.date)
+    }
+  }, [route.view, route.date, selectedEvent, selectedDate])
 
   const visibleGroups = useMemo(() => {
     if (!normalizedQuery) return groupedLocations
@@ -346,22 +335,30 @@ export default function FindEventPage({ brand }) {
 
   function toggleState(state) {
     setExpandedState((current) => (current === state ? null : state))
-    setSelectedEventId(null)
-    setSelectedDate(null)
   }
 
   function chooseEvent(event) {
-    setExpandedState(clean(event.state))
-    setSelectedEventId(event.id)
-    const dates = uniqueDates(event)
-    setSelectedDate(dates.length === 1 ? dates[0].date : null)
     setQuery('')
+    setExpandedState(clean(event.state))
+    window.location.hash = detailHash(event.id)
+  }
+
+  function goBackToList() {
+    window.location.hash = listHash()
+  }
+
+  function goBackToDetail() {
+    if (selectedEvent) window.location.hash = detailHash(selectedEvent.id)
+  }
+
+  function goBackToTickets() {
+    if (selectedEvent && route.date) {
+      window.location.hash = ticketsHash(selectedEvent.id, route.date)
+    }
   }
 
   function handleSearch(value) {
     setQuery(value)
-    setSelectedEventId(null)
-    setSelectedDate(null)
     const nextQuery = value.trim().toLowerCase()
     if (!nextQuery) {
       setExpandedState(null)
@@ -387,13 +384,45 @@ export default function FindEventPage({ brand }) {
     <div className="find-event">
       <div className="find-event__main">
         {brand}
-        <div className="find-event__browser">
-          <EventSearch
-            id="event-search-main"
-            value={query}
-            onChange={handleSearch}
-          />
+        <div
+          className={
+            selectedEvent
+              ? route.view === 'detail'
+                ? 'find-event__browser find-event__browser--detail'
+                : 'find-event__browser find-event__browser--detail find-event__browser--checkout'
+              : 'find-event__browser'
+          }
+        >
+          {!selectedEvent && (
+            <EventSearch
+              id="event-search-main"
+              value={query}
+              onChange={handleSearch}
+            />
+          )}
 
+          {selectedEvent && route.view === 'tickets' && selectedDate ? (
+            <TicketCheckout
+              event={selectedEvent}
+              date={route.date}
+              onBack={goBackToDetail}
+            />
+          ) : selectedEvent && route.view === 'pay' && selectedDate ? (
+            <PaymentPage
+              event={selectedEvent}
+              date={route.date}
+              quantities={quantities}
+              onBack={goBackToTickets}
+            />
+          ) : selectedEvent && route.view === 'confirm' && selectedDate ? (
+            <ConfirmationPage
+              event={selectedEvent}
+              date={route.date}
+              quantities={quantities}
+            />
+          ) : selectedEvent ? (
+            <EventDetail event={selectedEvent} onBack={goBackToList} />
+          ) : (
           <div
             className={
               showSearchResults
@@ -429,83 +458,8 @@ export default function FindEventPage({ brand }) {
                   onChooseEvent={chooseEvent}
                 />
               ))}
-
-            {selectedEvent && (
-              <>
-                <TextRow onClick={() => {
-                  setSelectedEventId(null)
-                  setSelectedDate(null)
-                }} muted>
-                  {clean(selectedEvent.state)}
-                </TextRow>
-                <TextRow>{clean(selectedEvent.city)}</TextRow>
-                {selectedEvent.venue && (
-                  <TextRow>{clean(selectedEvent.venue)}</TextRow>
-                )}
-                {eventDates.map((item) => (
-                  <TextRow
-                    key={item.date || 'coming-soon'}
-                    active={selectedDate === item.date}
-                    onClick={() => {
-                      if (item.date) setSelectedDate(item.date)
-                    }}
-                    muted={!item.date}
-                  >
-                    {formatDate(item.date)}
-                    {item.startTime ? ` · ${item.startTime}` : ''}
-                  </TextRow>
-                ))}
-
-                {selectedDate && (
-                  <div className="find-tickets">
-                    {tickets.length === 0 && (
-                      <TextRow muted>Ticket details coming soon</TextRow>
-                    )}
-                    {tickets.map((ticket, index) => {
-                      const label = [ticket.name, ticket.tier].filter(Boolean).join(' · ')
-                      const price =
-                        typeof ticket.price === 'number'
-                          ? `$${ticket.price.toFixed(2)}`
-                          : null
-                      const unavailable = !isPurchasable(ticket.status)
-                      return (
-                        <p
-                          key={`${label}-${index}`}
-                          className={
-                            unavailable
-                              ? 'find-ticket find-ticket--unavailable'
-                              : 'find-ticket'
-                          }
-                        >
-                          <span>{label}</span>
-                          {price && <span>{price}</span>}
-                          {unavailable && (
-                            <span className="find-ticket__status">
-                              {ticket.status.replace('-', ' ')}
-                            </span>
-                          )}
-                        </p>
-                      )
-                    })}
-                    {selectedEvent.ticketUrl &&
-                    (tickets.length === 0 ||
-                      tickets.some((ticket) => isPurchasable(ticket.status))) ? (
-                      <a
-                        className="find-tickets__cta"
-                        href={selectedEvent.ticketUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        Get Tickets
-                      </a>
-                    ) : (
-                      <TextRow muted>Tickets are not available yet</TextRow>
-                    )}
-                  </div>
-                )}
-              </>
-            )}
           </div>
+          )}
         </div>
       </div>
     </div>

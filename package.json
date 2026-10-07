@@ -11,6 +11,7 @@
     "scrape-events": "node scripts/scrape-wlf.js"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.117.3",
     "cheerio": "^1.2.0",
     "p5": "^2.3.3",
     "react": "^19.2.8",

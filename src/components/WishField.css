@@ -1,0 +1,60 @@
+.wish-field {
+  position: absolute;
+  top: calc(-1 * var(--page-pad));
+  right: calc(-1 * var(--page-pad));
+  bottom: calc(-1 * var(--page-pad));
+  left: calc(-1 * var(--page-pad));
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.wish {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 144px;
+  max-width: 144px;
+  color: #b4c6d8;
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0.384px;
+  font-synthesis: none;
+  text-shadow: 0 0 0 transparent;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  pointer-events: auto;
+  will-change: transform, opacity, filter;
+  transform: translate3d(-160px, 0, 0);
+  opacity: var(--wish-opacity, 0.62);
+  filter: blur(var(--wish-blur, 0px));
+  transition:
+    color 300ms ease-out,
+    text-shadow 300ms ease-out;
+}
+
+.wish:hover,
+.wish:focus-visible {
+  color: var(--color-cream);
+  opacity: 1;
+  text-shadow:
+    0 0 8px rgba(255, 246, 213, 0.55),
+    0 0 16px rgba(255, 246, 213, 0.28);
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wish {
+    will-change: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .wish-field {
+    inset: 0;
+  }
+}

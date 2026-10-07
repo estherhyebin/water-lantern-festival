@@ -31,6 +31,44 @@
   overflow: hidden;
 }
 
+.page--find:has(.find-event__browser--detail) {
+  padding-top: 0;
+}
+
+.find-event:has(.find-event__browser--detail) .find-event__main {
+  align-items: stretch;
+  padding-top: 0;
+}
+
+.find-event:has(.find-event__browser--detail) .brand {
+  padding-top: calc(var(--page-pad) + var(--content-pad-top));
+  flex-shrink: 0;
+}
+
+.find-event__browser--detail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  width: min(520px, 100%);
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-top: calc(var(--page-pad) + var(--content-pad-top));
+  padding-right: 24px;
+  padding-bottom: 96px;
+  scrollbar-width: none;
+}
+
+.find-event__browser--detail::-webkit-scrollbar {
+  display: none;
+}
+
+.find-event__browser--checkout {
+  width: min(680px, 100%);
+}
+
 .event-search {
   display: flex;
   align-items: center;
@@ -211,13 +249,8 @@ button.find-row--city:hover::after {
   transform: translateX(0);
 }
 
-.find-state .find-row--city,
-.find-event__group > .find-row--city {
+.find-state .find-row--city {
   padding-left: 24px;
-}
-
-.find-event__list--searching .find-event__group > .find-row--city {
-  padding-left: 48px;
 }
 
 .find-state:not(.find-state--expanded) .find-row--city {
@@ -312,6 +345,15 @@ button.find-row.find-row--muted:hover {
     gap: 32px;
   }
 
+  .find-event:has(.find-event__browser--detail) .find-event__main {
+    padding-top: 0;
+  }
+
+  .find-event:has(.find-event__browser--detail) .brand,
+  .find-event__browser--detail {
+    padding-top: calc(var(--page-pad) + 48px);
+  }
+
   .find-event__browser {
     width: min(100%, 400px);
   }
@@ -330,12 +372,7 @@ button.find-row.find-row--muted:hover {
     padding-left: 16px;
   }
 
-  .find-state .find-row--city,
-  .find-event__group > .find-row--city {
+  .find-state .find-row--city {
     padding-left: 16px;
-  }
-
-  .find-event__list--searching .find-event__group > .find-row--city {
-    padding-left: 32px;
   }
 }

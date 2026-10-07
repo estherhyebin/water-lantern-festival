@@ -13,13 +13,18 @@ const findLanterns = [
 ]
 
 function LanternIllustrations({ variant = 'home' }) {
-  const lanterns = variant === 'find' ? findLanterns : homeLanterns
+  const lanterns = variant === 'home' ? homeLanterns : findLanterns
+  const className =
+    variant === 'checkout'
+      ? 'lanterns lanterns--find lanterns--checkout'
+      : variant === 'wish'
+        ? 'lanterns lanterns--find lanterns--wish'
+        : variant === 'find'
+          ? 'lanterns lanterns--find'
+          : 'lanterns'
 
   return (
-    <div
-      className={variant === 'find' ? 'lanterns lanterns--find' : 'lanterns'}
-      aria-hidden="true"
-    >
+    <div className={className} aria-hidden="true">
       {lanterns.map((lantern) => (
         <div key={lantern.className} className={lantern.className}>
           <img src={lanternFill} alt="" width={141} height={144} />
