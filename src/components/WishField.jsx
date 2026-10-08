@@ -5,11 +5,13 @@ import {
 } from '../lib/wishesApi.js'
 import {
   ACTIVE_WISH_COUNT,
+  WISH_GAP,
   makeSlot,
   mergeWish,
-  packWishTops,
+  normalizeWishText,
   pickNextWish,
   seedSlots,
+  topsForLanes,
 } from '../lib/wishPool.js'
 import Wish from './Wish.jsx'
 import './WishField.css'
@@ -24,21 +26,29 @@ export default function WishField({ incomingWish = null, onStatus }) {
   const fieldRef = useRef(null)
   const poolRef = useRef([])
   const slotsRef = useRef([])
-  const recentRef = useRef([])
   const pendingRef = useRef([])
   const ignoreRealtimeRef = useRef(new Set())
+  const shownIdsRef = useRef(new Set())
+  const shownTextsRef = useRef(new Set())
+  const [laneLayout, setLaneLayout] = useState({
+    tops: topsForLanes(480),
+    maxHeight: 64,
+  })
 
-  const packWishes = useCallback(() => {
+  function markShown(wish) {
+    if (!wish) return
+    shownIdsRef.current.add(wish.id)
+    shownTextsRef.current.add(normalizeWishText(wish.text))
+  }
+
+  const updateLaneLayout = useCallback(() => {
     const field = fieldRef.current
     if (!field) return
-    const nodes = [...field.querySelectorAll('.wish')].sort(
-      (left, right) => Number(left.dataset.lane) - Number(right.dataset.lane),
-    )
-    if (!nodes.length) return
-    const heights = nodes.map((node) => node.offsetHeight)
-    const tops = packWishTops(field.clientHeight, heights)
-    nodes.forEach((node, index) => {
-      node.style.top = `${tops[index]}px`
+    const height = field.clientHeight
+    if (height <= 0) return
+    setLaneLayout({
+      tops: topsForLanes(height),
+      maxHeight: Math.max(36, height / ACTIVE_WISH_COUNT - WISH_GAP),
     })
   }, [])
 
@@ -54,7 +64,7 @@ export default function WishField({ incomingWish = null, onStatus }) {
       const labelBox = label.getBoundingClientRect()
       const gap = 20
       field.style.bottom = `${Math.max(0, hostBox.bottom - labelBox.top + gap)}px`
-      packWishes()
+      updateLaneLayout()
     }
 
     keepWishesAboveLabel()
@@ -66,11 +76,11 @@ export default function WishField({ incomingWish = null, onStatus }) {
       observer.disconnect()
       window.removeEventListener('resize', keepWishesAboveLabel)
     }
-  }, [packWishes])
+  }, [updateLaneLayout])
 
   useLayoutEffect(() => {
-    packWishes()
-  }, [slots, packWishes])
+    updateLaneLayout()
+  }, [slots.length, updateLaneLayout])
 
   useEffect(() => {
     slotsRef.current = slots
@@ -78,26 +88,30 @@ export default function WishField({ incomingWish = null, onStatus }) {
 
   const recycleLane = useCallback((lane) => {
     setSlots((current) => {
-      const leaving = current.find((slot) => slot.lane === lane)
-      if (leaving) {
-        recentRef.current = [...recentRef.current, leaving.wish.id].slice(-12)
+      let nextWish = null
+      while (!nextWish && pendingRef.current.length) {
+        const candidate = pendingRef.current.shift()
+        if (
+          candidate &&
+          !shownIdsRef.current.has(candidate.id) &&
+          !shownTextsRef.current.has(normalizeWishText(candidate.text))
+        ) {
+          nextWish = candidate
+        }
       }
-
-      const nextWish = pendingRef.current.shift() ||
-        pickNextWish(
+      if (!nextWish) {
+        nextWish = pickNextWish(
           poolRef.current,
-          new Set(
-            current
-              .filter((slot) => slot.lane !== lane)
-              .map((slot) => slot.wish.id),
-          ),
-          recentRef.current,
+          shownIdsRef.current,
+          shownTextsRef.current,
         )
+      }
 
       if (!nextWish) {
         return current.filter((slot) => slot.lane !== lane)
       }
 
+      markShown(nextWish)
       const extraDuration = Math.round(Math.random() * 5000)
       const nextSlot = makeSlot(nextWish, lane, { extraDuration })
       return current
@@ -122,7 +136,12 @@ export default function WishField({ incomingWish = null, onStatus }) {
     fetchApprovedWishes().then((result) => {
       if (cancelled) return
       poolRef.current = result.wishes
-      setSlots(seedSlots(result.wishes))
+      const nextSlots = seedSlots(result.wishes)
+      shownIdsRef.current = new Set(nextSlots.map((slot) => slot.wish.id))
+      shownTextsRef.current = new Set(
+        nextSlots.map((slot) => normalizeWishText(slot.wish.text)),
+      )
+      setSlots(nextSlots)
       onStatus?.(result)
     })
 
@@ -130,7 +149,11 @@ export default function WishField({ incomingWish = null, onStatus }) {
       if (ignoreRealtimeRef.current.has(wish.id)) return
       poolRef.current = mergeWish(poolRef.current, wish)
       const showing = new Set(slotsRef.current.map((slot) => slot.wish.id))
-      if (showing.has(wish.id) || pendingRef.current.some((item) => item.id === wish.id)) {
+      if (
+        showing.has(wish.id) ||
+        shownIdsRef.current.has(wish.id) ||
+        pendingRef.current.some((item) => item.id === wish.id)
+      ) {
         return
       }
       pendingRef.current.push(wish)
@@ -151,20 +174,18 @@ export default function WishField({ incomingWish = null, onStatus }) {
     setSlots((current) => {
       const showing = current.some((slot) => slot.wish.id === incomingWish.id)
       if (showing) return current
+      if (shownIdsRef.current.has(incomingWish.id)) return current
+      if (pendingRef.current.some((item) => item.id === incomingWish.id)) return current
 
       if (current.length < ACTIVE_WISH_COUNT) {
+        markShown(incomingWish)
         const usedLanes = new Set(current.map((slot) => slot.lane))
         const lane = [...Array(ACTIVE_WISH_COUNT).keys()].find((index) => !usedLanes.has(index)) ?? 0
         return current.concat(makeSlot(incomingWish, lane))
       }
 
-      const replace = current.reduce((oldest, slot) =>
-        slot.startedAt < oldest.startedAt ? slot : oldest,
-      )
-      recentRef.current = [...recentRef.current, replace.wish.id].slice(-12)
+      pendingRef.current.push(incomingWish)
       return current
-        .filter((slot) => slot.lane !== replace.lane)
-        .concat(makeSlot(incomingWish, replace.lane))
     })
   }, [incomingWish])
 
@@ -178,6 +199,8 @@ export default function WishField({ incomingWish = null, onStatus }) {
         <Wish
           key={slot.key}
           slot={slot}
+          top={laneLayout.tops[slot.lane] ?? 0}
+          maxHeight={laneLayout.maxHeight}
           reducedMotion={reducedMotion}
           onFinished={recycleLane}
         />

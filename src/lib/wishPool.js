@@ -5,13 +5,22 @@ export function durationForLane(lane, extra = 0) {
   return 28000 + lane * 3200 + extra
 }
 
-export function pickNextWish(pool, activeIds, recentIds) {
+export function normalizeWishText(text) {
+  return String(text || '')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .toLowerCase()
+    .replace(/[.!?…]+$/g, '')
+    .trim()
+}
+
+export function pickNextWish(pool, usedIds, usedTexts = new Set()) {
   if (!pool.length) return null
-  const unused = pool.filter(
-    (wish) => !activeIds.has(wish.id) && !recentIds.includes(wish.id),
-  )
-  const fallback = pool.filter((wish) => !activeIds.has(wish.id))
-  const source = unused.length ? unused : fallback.length ? fallback : pool
+  const source = pool.filter((wish) => {
+    if (usedIds.has(wish.id)) return false
+    return !usedTexts.has(normalizeWishText(wish.text))
+  })
+  if (!source.length) return null
   return source[Math.floor(Math.random() * source.length)]
 }
 
@@ -29,16 +38,21 @@ export function makeSlot(wish, lane, { progress = 0, extraDuration = 0 } = {}) {
 export function seedSlots(pool) {
   const count = Math.min(ACTIVE_WISH_COUNT, Math.max(pool.length, 0))
   const slots = []
-  const used = new Set()
+  const usedIds = new Set()
+  const usedTexts = new Set()
   const preferred = [
     ...pool.filter((wish) => wish.sample),
     ...pool.filter((wish) => !wish.sample),
   ]
   for (let lane = 0; lane < count; lane += 1) {
     const wish =
-      preferred.find((item) => !used.has(item.id)) || pickNextWish(pool, used, [])
+      preferred.find(
+        (item) =>
+          !usedIds.has(item.id) && !usedTexts.has(normalizeWishText(item.text)),
+      ) || pickNextWish(pool, usedIds, usedTexts)
     if (!wish) break
-    used.add(wish.id)
+    usedIds.add(wish.id)
+    usedTexts.add(normalizeWishText(wish.text))
     const progress = 0.08 + ((lane * 0.11) % 0.42)
     const extraDuration = (lane % 3) * 1800
     slots.push(makeSlot(wish, lane, { progress, extraDuration }))
@@ -52,22 +66,11 @@ export function mergeWish(pool, wish) {
   return [wish, ...without]
 }
 
-export function packWishTops(fieldHeight, heights, gap = WISH_GAP) {
-  const count = heights.length
-  if (!count) return []
-  const sum = heights.reduce((total, height) => total + height, 0)
-  const extra = Math.max(0, fieldHeight - sum - gap * (count + 1))
-  const spread = extra / (count + 1)
-  const tops = []
-  let y = gap + spread
-  for (let index = 0; index < count; index += 1) {
-    if (index > 0) {
-      y = Math.max(y, tops[index - 1] + heights[index - 1] + gap)
-    }
-    tops.push(y)
-    y += heights[index] + gap + spread
-  }
-  return tops
+export function topsForLanes(fieldHeight, laneCount = ACTIVE_WISH_COUNT, gap = WISH_GAP) {
+  const count = Math.max(1, laneCount)
+  const usable = Math.max(0, fieldHeight - gap)
+  const band = usable / count
+  return Array.from({ length: count }, (_, lane) => gap + lane * band)
 }
 
 export const WISH_BASE_OPACITY = 0.62

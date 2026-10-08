@@ -1,4 +1,5 @@
 import { SAMPLE_WISHES } from '../data/sampleWishes.js'
+import { normalizeWishText } from './wishPool.js'
 import { supabase, supabaseConfigured } from './supabase.js'
 
 export const WISH_MAX_LENGTH = 280
@@ -14,16 +15,21 @@ function mapRow(row) {
 }
 
 function withDefaultWishes(wishes = []) {
-  const seen = new Set(
-    wishes.map((wish) => String(wish.text || '').replace(/\s+/g, ' ').trim().toLowerCase()),
-  )
+  const uniqueSaved = []
+  const seen = new Set()
+  for (const wish of wishes) {
+    const text = normalizeWishText(wish.text)
+    if (!text || seen.has(text)) continue
+    seen.add(text)
+    uniqueSaved.push(wish)
+  }
   const defaults = SAMPLE_WISHES.filter((wish) => {
-    const text = wish.text.replace(/\s+/g, ' ').trim().toLowerCase()
+    const text = normalizeWishText(wish.text)
     if (seen.has(text)) return false
     seen.add(text)
     return true
   })
-  return [...defaults, ...wishes]
+  return [...defaults, ...uniqueSaved]
 }
 
 export async function fetchApprovedWishes() {

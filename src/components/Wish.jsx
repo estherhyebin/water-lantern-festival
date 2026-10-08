@@ -25,7 +25,7 @@ function readBrandZone() {
   return brandZone
 }
 
-export default function Wish({ slot, reducedMotion, onFinished }) {
+export default function Wish({ slot, top, maxHeight, reducedMotion, onFinished }) {
   const nodeRef = useRef(null)
   const slotRef = useRef(slot)
 
@@ -80,6 +80,7 @@ export default function Wish({ slot, reducedMotion, onFinished }) {
       className="wish"
       tabIndex={0}
       data-lane={slot.lane}
+      style={{ top, maxHeight }}
     >
       {slot.wish.text}
     </p>
