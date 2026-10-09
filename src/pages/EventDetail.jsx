@@ -55,11 +55,28 @@ function uniqueSchedule(event) {
   return items
 }
 
-function addressLines(address) {
-  const parts = clean(address)
-    .split(',')
-    .map((part) => part.trim())
-    .filter(Boolean)
+function uniqueCommaParts(value, skipValue = null) {
+  const skip = skipValue ? clean(skipValue).toLowerCase() : null
+  const seen = new Set()
+  const unique = []
+  for (const part of clean(value).split(',')) {
+    const item = part.trim()
+    if (!item) continue
+    const key = item.toLowerCase()
+    if (skip && key === skip) continue
+    if (seen.has(key)) continue
+    seen.add(key)
+    unique.push(item)
+  }
+  return unique
+}
+
+function uniqueAddress(address, venue) {
+  return uniqueCommaParts(address, venue).join(', ')
+}
+
+function addressLines(address, venue) {
+  const parts = uniqueCommaParts(address, venue)
   if (parts.length >= 3) {
     return [`${parts.slice(0, -2).join(', ')},`, parts.slice(-2).join(', ')]
   }
@@ -67,7 +84,9 @@ function addressLines(address) {
 }
 
 function mapsQuery(event) {
-  return [clean(event.venue), clean(event.address)].filter(Boolean).join(', ')
+  const venue = clean(event.venue)
+  const address = uniqueAddress(event.address, venue)
+  return [venue, address].filter(Boolean).join(', ')
 }
 
 function locationLabel(event) {
@@ -78,8 +97,8 @@ export default function EventDetail({ event, onBack }) {
   const dates = eventDates(event)
   const schedule = uniqueSchedule(event)
   const venue = clean(event.venue)
-  const address = clean(event.address)
-  const lines = addressLines(address)
+  const address = uniqueAddress(event.address, venue)
+  const lines = addressLines(event.address, venue)
   const query = mapsQuery(event)
   const mapsUrl = query
     ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`
