@@ -3,8 +3,7 @@
   width: 571px;
   max-width: 100%;
   aspect-ratio: 571 / 329;
-  overflow: hidden;
-  mix-blend-mode: lighten;
+  background: transparent;
 }
 
 .crossfade-gallery img {
@@ -15,6 +14,7 @@
   object-fit: cover;
   object-position: center;
   opacity: 0;
+  mix-blend-mode: lighten;
   transition: opacity var(--crossfade-duration, 1800ms) ease-in-out;
   pointer-events: none;
 }
