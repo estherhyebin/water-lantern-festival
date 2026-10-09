@@ -7,8 +7,10 @@ export const LANTERN_GALLERY_IMAGES = [
   '/images/lantern-image-3.png',
 ]
 
-const HOLD_MS = 4500
-const FADE_MS = 1800
+// Change these two numbers to control the About Us photos.
+// HOLD_MS = how long each photo stays still. FADE_MS = how long the crossfade takes.
+const HOLD_MS = 3200
+const FADE_MS = 1100
 
 export default function CrossfadeGallery({
   images = LANTERN_GALLERY_IMAGES,
