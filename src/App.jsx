@@ -6,6 +6,7 @@ import LanternIllustrations from './components/LanternIllustrations.jsx'
 import CornerOrnaments from './components/CornerOrnaments.jsx'
 import AsciiRipple from './components/AsciiRipple.jsx'
 import CursorRipple from './components/CursorRipple.jsx'
+import AboutUsPage from './pages/AboutUsPage.jsx'
 import FindEventPage from './pages/FindEventPage.jsx'
 import WriteWishPage from './pages/WriteWishPage.jsx'
 import { parseFindRoute } from './pages/findRoute.js'
@@ -18,6 +19,9 @@ function getPageFromHash() {
   }
   if (hash === '#write-a-wish') {
     return 'wish'
+  }
+  if (hash === '#about-us') {
+    return 'about'
   }
   return 'home'
 }
@@ -56,11 +60,14 @@ function App() {
 
   const isFindEvent = page === 'find'
   const isWish = page === 'wish'
+  const isAbout = page === 'about'
   const pageClass = isFindEvent
     ? 'page page--find'
     : isWish
       ? 'page page--wish'
-      : 'page'
+      : isAbout
+        ? 'page page--about'
+        : 'page'
 
   return (
     <main className={pageClass}>
@@ -69,13 +76,17 @@ function App() {
         <FindEventPage brand={<Brand activeHref="#find-an-event" />} />
       ) : isWish ? (
         <WriteWishPage brand={<Brand activeHref="#write-a-wish" />} />
+      ) : isAbout ? (
+        <AboutUsPage brand={<Brand activeHref="#about-us" />} />
       ) : (
         <div className="home-content">
           <Brand />
           <HeroContent />
         </div>
       )}
-      {page !== 'wish' ? <LanternIllustrations variant={lanternVariant} /> : null}
+      {page !== 'wish' && page !== 'about' ? (
+        <LanternIllustrations variant={lanternVariant} />
+      ) : null}
       <AsciiRipple />
       <CursorRipple />
     </main>

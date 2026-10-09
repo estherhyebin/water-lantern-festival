@@ -33,7 +33,8 @@
 }
 
 .page--find,
-.page--wish {
+.page--wish,
+.page--about {
   overflow: hidden;
   padding-bottom: 0;
 }
