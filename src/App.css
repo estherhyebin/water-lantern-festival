@@ -34,9 +34,19 @@
 
 .page--find,
 .page--wish,
-.page--about {
+.page--about,
+.page--faq,
+.page--contact {
   overflow: hidden;
   padding-bottom: 0;
+}
+
+.page--contact {
+  overflow: hidden;
+}
+
+.page--faq {
+  overflow: hidden;
 }
 
 .page--about {

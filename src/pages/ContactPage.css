@@ -1,0 +1,218 @@
+.contact {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.contact__main {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: flex-start;
+  gap: min(126px, 8vw);
+  min-height: 0;
+  width: 100%;
+  padding: var(--content-pad-top) 0 0 var(--content-pad-left);
+  overflow: hidden;
+}
+
+.contact .brand {
+  flex-shrink: 0;
+}
+
+.contact__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 59px;
+  width: min(572px, 100%);
+  min-height: 0;
+  margin: 0;
+  padding-bottom: 96px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: none;
+}
+
+.contact__content::-webkit-scrollbar {
+  display: none;
+}
+
+.contact__heading {
+  margin: 0;
+  color: var(--color-cream);
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.48px;
+  font-synthesis: none;
+}
+
+.contact__fields {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+}
+
+.contact__row {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+
+.contact-field {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  min-width: 0;
+}
+
+.contact__fields > .contact-field {
+  align-self: stretch;
+  width: 100%;
+}
+
+.contact-field label {
+  color: var(--color-cream);
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.384px;
+  font-synthesis: none;
+}
+
+.contact-field input,
+.contact-field textarea {
+  width: 100%;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--color-cream);
+  caret-color: var(--color-cream);
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.384px;
+  font-synthesis: none;
+  outline: none;
+}
+
+.contact-field input {
+  height: 24px;
+  padding: 0;
+  border-bottom: 0.8px solid var(--color-cream);
+}
+
+.contact-field textarea {
+  height: 196px;
+  padding: 12px;
+  border: 0.8px solid var(--color-cream);
+  resize: vertical;
+}
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+  color: var(--color-cream);
+  opacity: 0.5;
+}
+
+.contact-field input:focus-visible,
+.contact-field textarea:focus-visible {
+  text-shadow:
+    0 0 8px rgba(255, 246, 213, 0.35),
+    0 0 16px rgba(255, 246, 213, 0.18);
+}
+
+.contact-field input[aria-invalid='true'],
+.contact-field textarea[aria-invalid='true'] {
+  border-color: #fff6d5;
+  box-shadow: 0 0 0 1px rgba(255, 246, 213, 0.35);
+}
+
+.contact-field__error,
+.contact__status {
+  margin: 0;
+  color: var(--color-cream);
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.384px;
+  font-synthesis: none;
+}
+
+.contact__submit {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-cream);
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.48px;
+  font-synthesis: none;
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: 0 0 0 transparent;
+  transition: text-shadow 300ms ease-out;
+}
+
+.contact__submit:hover,
+.contact__submit:focus-visible {
+  text-decoration: none;
+  text-shadow:
+    0 0 8px rgba(255, 246, 213, 0.55),
+    0 0 16px rgba(255, 246, 213, 0.28);
+  outline: none;
+}
+
+.contact__submit:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+@media (max-width: 900px) {
+  .contact__main {
+    flex-direction: column;
+    padding: 48px 16px 0;
+    gap: 32px;
+  }
+
+  .contact__content {
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: 572px;
+    gap: 32px;
+  }
+
+  .contact__fields {
+    gap: 28px;
+  }
+
+  .contact__row {
+    flex-direction: column;
+    gap: 28px;
+  }
+}
