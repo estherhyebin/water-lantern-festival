@@ -46,7 +46,13 @@
 }
 
 .page--faq {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.page--faq::-webkit-scrollbar {
+  display: none;
 }
 
 .page--about {

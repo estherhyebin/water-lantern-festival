@@ -2,44 +2,35 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  flex: 1 1 auto;
-  min-height: 0;
+  flex: 1 0 auto;
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .faq__main {
   display: flex;
-  flex: 1 1 auto;
+  flex: 1 0 auto;
   align-items: flex-start;
   gap: min(126px, 8vw);
-  min-height: 0;
   width: 100%;
-  padding: var(--content-pad-top) 0 0 var(--content-pad-left);
-  overflow: hidden;
+  padding: var(--content-pad-top) 0 96px var(--content-pad-left);
+  overflow: visible;
 }
 
 .faq .brand {
+  position: sticky;
+  top: 0;
   flex-shrink: 0;
+  align-self: flex-start;
 }
 
 .faq__content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  align-self: stretch;
   gap: 59px;
   width: min(451px, 100%);
-  min-height: 0;
-  padding-bottom: 96px;
-  overflow-x: hidden;
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  scrollbar-width: none;
-}
-
-.faq__content::-webkit-scrollbar {
-  display: none;
+  overflow: visible;
 }
 
 .faq__heading {

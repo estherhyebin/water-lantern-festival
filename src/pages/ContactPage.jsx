@@ -42,12 +42,7 @@ function validate(form) {
   } else if (!EMAIL_PATTERN.test(form.email.trim())) {
     errors.email = 'Please enter a valid email address.'
   }
-  if (!form.location.trim()) {
-    errors.location = 'Please enter the event location you are attending.'
-  }
-  if (!form.date.trim()) {
-    errors.date = 'Please enter the festival date.'
-  } else if (!parseFestivalDate(form.date)) {
+  if (form.date.trim() && !parseFestivalDate(form.date)) {
     errors.date = 'Please use a real date in the form MM - DD - YYYY.'
   }
   if (!form.message.trim()) errors.message = 'Please enter a message.'
@@ -80,7 +75,7 @@ export default function ContactPage({ brand }) {
     setErrors(nextErrors)
     const firstError = Object.keys(nextErrors)[0]
     if (firstError) {
-      setStatus('Please fix the highlighted fields before submitting.')
+      setStatus('Please fill in the required fields before submitting.')
       document.getElementById(`${formId}-${firstError}`)?.focus()
       return
     }
@@ -199,7 +194,6 @@ export default function ContactPage({ brand }) {
                   id={`${formId}-location`}
                   name="location"
                   type="text"
-                  required
                   value={form.location}
                   aria-invalid={errors.location ? 'true' : undefined}
                   aria-describedby={errors.location ? errorId : undefined}
@@ -213,7 +207,6 @@ export default function ContactPage({ brand }) {
                   type="text"
                   inputMode="numeric"
                   autoComplete="off"
-                  required
                   placeholder="MM - DD - YYYY"
                   value={form.date}
                   aria-invalid={errors.date ? 'true' : undefined}

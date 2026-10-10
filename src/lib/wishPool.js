@@ -24,14 +24,14 @@ export function pickNextWish(pool, usedIds, usedTexts = new Set()) {
   return source[Math.floor(Math.random() * source.length)]
 }
 
-export function makeSlot(wish, lane, { progress = 0, extraDuration = 0 } = {}) {
+export function makeSlot(wish, lane, { progress = 0, extraDuration = 0, delay = 0 } = {}) {
   const duration = durationForLane(lane, extraDuration)
   return {
     key: `${wish.id}-${lane}-${Math.round(progress * 1000)}-${duration}`,
     wish,
     lane,
     duration,
-    startedAt: performance.now() - progress * duration,
+    startedAt: performance.now() + delay - progress * duration,
   }
 }
 
@@ -53,9 +53,14 @@ export function seedSlots(pool) {
     if (!wish) break
     usedIds.add(wish.id)
     usedTexts.add(normalizeWishText(wish.text))
-    const progress = 0.08 + ((lane * 0.11) % 0.42)
     const extraDuration = (lane % 3) * 1800
-    slots.push(makeSlot(wish, lane, { progress, extraDuration }))
+    slots.push(
+      makeSlot(wish, lane, {
+        progress: 0,
+        extraDuration,
+        delay: lane * 1700,
+      }),
+    )
   }
   return slots
 }
