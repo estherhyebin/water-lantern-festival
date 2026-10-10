@@ -49,8 +49,7 @@ export default function Wish({ slot, top, maxHeight, reducedMotion, onFinished }
     }
 
     if (reducedMotion) {
-      const rest = 0.22 + (slot.lane * 0.09) % 0.4
-      place(rest)
+      place(slot.progress > 0 ? slot.progress : 0.2 + Math.random() * 0.45)
       return undefined
     }
 

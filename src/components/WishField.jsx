@@ -106,14 +106,25 @@ export default function WishField({ incomingWish = null, onStatus }) {
           shownTextsRef.current,
         )
       }
+      if (!nextWish) {
+        const showingTexts = new Set(
+          current.map((slot) => normalizeWishText(slot.wish.text)),
+        )
+        const reusable = poolRef.current.filter(
+          (wish) => !showingTexts.has(normalizeWishText(wish.text)),
+        )
+        if (reusable.length) {
+          nextWish = reusable[Math.floor(Math.random() * reusable.length)]
+        }
+      }
 
       if (!nextWish) {
         return current.filter((slot) => slot.lane !== lane)
       }
 
       markShown(nextWish)
-      const extraDuration = Math.round(Math.random() * 5000)
-      const nextSlot = makeSlot(nextWish, lane, { extraDuration })
+      const extraDuration = Math.round(Math.random() * 16000)
+      const nextSlot = makeSlot(nextWish, lane, { extraDuration, delay: Math.round(Math.random() * 900) })
       return current
         .filter((slot) => slot.lane !== lane)
         .concat(nextSlot)

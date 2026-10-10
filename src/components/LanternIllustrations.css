@@ -14,17 +14,26 @@
   pointer-events: auto;
   transform: translateY(0);
   z-index: 1;
-  will-change: filter;
   transition:
     transform 500ms ease-out,
-    filter 280ms ease-out,
     opacity 280ms ease-out;
+}
+
+.lantern__glow {
+  position: absolute;
+  inset: -160px;
+  pointer-events: none;
+  will-change: filter;
+  transition: filter 280ms ease-out;
 }
 
 .lantern:hover {
   z-index: 6;
   transform: translateY(-6px);
   opacity: 1;
+}
+
+.lantern:hover .lantern__glow {
   animation: none;
   filter:
     brightness(1.55)
@@ -36,8 +45,11 @@
 }
 
 .lantern img {
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  top: 160px;
+  left: 160px;
+  width: calc(100% - 320px);
+  height: calc(100% - 320px);
   object-fit: contain;
   pointer-events: none;
   will-change: transform;
@@ -49,6 +61,9 @@
   width: 40%;
   height: 40%;
   opacity: 0.5;
+}
+
+.lantern--back .lantern__glow {
   animation: lantern-glow-back 4.7s ease-in-out infinite;
   animation-delay: -2.3s;
 }
@@ -59,6 +74,9 @@
   width: 44%;
   height: 44%;
   opacity: 0.75;
+}
+
+.lantern--mid .lantern__glow {
   animation: lantern-glow-mid 3.6s ease-in-out infinite;
   animation-delay: -1.1s;
 }
@@ -68,6 +86,9 @@
   left: 50%;
   width: 48%;
   height: 48%;
+}
+
+.lantern--front .lantern__glow {
   animation: lantern-glow-front 7.2s ease-in-out infinite;
   animation-delay: -3.8s;
 }
@@ -76,10 +97,9 @@
 .lantern--mid:hover,
 .lantern--front:hover {
   opacity: 1;
-  animation: none;
 }
 
-.lantern--front:hover {
+.lantern--front:hover .lantern__glow {
   filter:
     brightness(1.85)
     saturate(1.4)
@@ -389,6 +409,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .lantern,
+  .lantern__glow,
   .lantern img {
     animation: none;
     will-change: auto;

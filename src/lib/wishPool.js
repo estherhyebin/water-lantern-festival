@@ -1,8 +1,17 @@
-export const ACTIVE_WISH_COUNT = 6
+export const ACTIVE_WISH_COUNT = 7
 export const WISH_GAP = 16
 
-export function durationForLane(lane, extra = 0) {
-  return 28000 + lane * 3200 + extra
+export function durationForLane(_lane, extra = 0) {
+  return 22000 + extra
+}
+
+function shuffle(items) {
+  const copy = [...items]
+  for (let index = copy.length - 1; index > 0; index -= 1) {
+    const swap = Math.floor(Math.random() * (index + 1))
+    ;[copy[index], copy[swap]] = [copy[swap], copy[index]]
+  }
+  return copy
 }
 
 export function normalizeWishText(text) {
@@ -27,10 +36,11 @@ export function pickNextWish(pool, usedIds, usedTexts = new Set()) {
 export function makeSlot(wish, lane, { progress = 0, extraDuration = 0, delay = 0 } = {}) {
   const duration = durationForLane(lane, extraDuration)
   return {
-    key: `${wish.id}-${lane}-${Math.round(progress * 1000)}-${duration}`,
+    key: `${wish.id}-${lane}-${Math.round(progress * 1000)}-${duration}-${Math.round(delay)}`,
     wish,
     lane,
     duration,
+    progress,
     startedAt: performance.now() + delay - progress * duration,
   }
 }
@@ -53,16 +63,24 @@ export function seedSlots(pool) {
     if (!wish) break
     usedIds.add(wish.id)
     usedTexts.add(normalizeWishText(wish.text))
-    const extraDuration = (lane % 3) * 1800
-    slots.push(
-      makeSlot(wish, lane, {
-        progress: 0,
-        extraDuration,
-        delay: lane * 1700,
-      }),
-    )
+    slots.push({ wish, lane })
   }
-  return slots
+
+  const placed = shuffle(slots)
+  const progresses = shuffle(
+    placed.map((_, index) => {
+      const span = placed.length === 1 ? 0 : index / (placed.length - 1)
+      const jitter = (Math.random() - 0.5) * 0.1
+      return Math.min(0.58, Math.max(0.12, 0.14 + span * 0.4 + jitter))
+    }),
+  )
+
+  return placed.map((slot, index) =>
+    makeSlot(slot.wish, slot.lane, {
+      progress: progresses[index],
+      extraDuration: Math.round(Math.random() * 16000),
+    }),
+  )
 }
 
 export function mergeWish(pool, wish) {

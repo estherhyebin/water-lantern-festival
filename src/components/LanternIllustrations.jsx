@@ -27,7 +27,9 @@ function LanternIllustrations({ variant = 'home' }) {
     <div className={className} aria-hidden="true">
       {lanterns.map((lantern) => (
         <div key={lantern.className} className={lantern.className}>
-          <img src={lanternFill} alt="" width={141} height={144} />
+          <span className="lantern__glow">
+            <img src={lanternFill} alt="" width={141} height={144} />
+          </span>
         </div>
       ))}
     </div>
