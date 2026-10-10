@@ -25,6 +25,54 @@ function LanternIllustrations({ variant = 'home' }) {
 
   return (
     <div className={className} aria-hidden="true">
+      <svg className="lantern-filters" width="0" height="0" aria-hidden="true">
+        <filter
+          id="lantern-hover-glow"
+          x="-180%"
+          y="-180%"
+          width="460%"
+          height="460%"
+          colorInterpolationFilters="sRGB"
+        >
+          <feGaussianBlur in="SourceAlpha" stdDeviation="8" result="tight" />
+          <feGaussianBlur in="SourceAlpha" stdDeviation="22" result="mid" />
+          <feGaussianBlur in="SourceAlpha" stdDeviation="46" result="wide" />
+          <feFlood floodColor="#fff6d5" floodOpacity="1" result="cream" />
+          <feFlood floodColor="#ffc86e" floodOpacity="0.8" result="gold" />
+          <feComposite in="cream" in2="tight" operator="in" result="tightGlow" />
+          <feComposite in="cream" in2="mid" operator="in" result="midGlow" />
+          <feComposite in="gold" in2="wide" operator="in" result="wideGlow" />
+          <feMerge>
+            <feMergeNode in="wideGlow" />
+            <feMergeNode in="midGlow" />
+            <feMergeNode in="tightGlow" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+        <filter
+          id="lantern-hover-glow-front"
+          x="-180%"
+          y="-180%"
+          width="460%"
+          height="460%"
+          colorInterpolationFilters="sRGB"
+        >
+          <feGaussianBlur in="SourceAlpha" stdDeviation="10" result="tight" />
+          <feGaussianBlur in="SourceAlpha" stdDeviation="28" result="mid" />
+          <feGaussianBlur in="SourceAlpha" stdDeviation="54" result="wide" />
+          <feFlood floodColor="#fffaf0" floodOpacity="1" result="cream" />
+          <feFlood floodColor="#ffb450" floodOpacity="0.9" result="gold" />
+          <feComposite in="cream" in2="tight" operator="in" result="tightGlow" />
+          <feComposite in="cream" in2="mid" operator="in" result="midGlow" />
+          <feComposite in="gold" in2="wide" operator="in" result="wideGlow" />
+          <feMerge>
+            <feMergeNode in="wideGlow" />
+            <feMergeNode in="midGlow" />
+            <feMergeNode in="tightGlow" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </svg>
       {lanterns.map((lantern) => (
         <div key={lantern.className} className={lantern.className}>
           <span className="lantern__glow">
