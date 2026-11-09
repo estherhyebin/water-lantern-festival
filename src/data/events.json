@@ -71,169 +71,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/davis-county",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/davis-county",
-    "lastUpdated": "2026-11-08"
-  },
-  {
-    "id": "las-vegas-2026-11-07",
-    "name": "Water Lantern Festival",
-    "city": "Las Vegas",
-    "state": "Nevada",
-    "country": "USA",
-    "dates": [
-      {
-        "date": "2026-11-07",
-        "startTime": null,
-        "endTime": null
-      }
-    ],
-    "venue": "Sunset Park",
-    "address": "2601 E Sunset Rd, Las Vegas, NV 89120",
-    "schedule": [
-      {
-        "time": "2:00",
-        "activity": "Gates Open"
-      },
-      {
-        "time": "2:00 - 6:00",
-        "activity": "Enjoy Food Trucks / Music / Fun"
-      },
-      {
-        "time": "4:30",
-        "activity": "Design your Lantern"
-      },
-      {
-        "time": "5:00 - 6:00",
-        "activity": "Lantern Launch"
-      },
-      {
-        "time": "6:00",
-        "activity": "Event Ends"
-      }
-    ],
-    "tickets": [
-      {
-        "name": "General Admission",
-        "pricing": [
-          {
-            "tier": "Early Bird",
-            "price": 29.99,
-            "currency": "USD",
-            "status": "available"
-          },
-          {
-            "tier": "Regular",
-            "price": 30.99,
-            "currency": "USD",
-            "status": "available"
-          },
-          {
-            "tier": "Last Call",
-            "price": 42.99,
-            "currency": "USD",
-            "status": "available"
-          },
-          {
-            "tier": "At Event",
-            "price": 57.99,
-            "currency": "USD",
-            "status": "available"
-          }
-        ]
-      },
-      {
-        "name": "Date Night",
-        "tier": "Date Night Special",
-        "price": 89.99,
-        "currency": "USD",
-        "status": "available"
-      },
-      {
-        "name": "Family/Friends",
-        "tier": "Family Bundle",
-        "price": 24.99,
-        "currency": "USD",
-        "status": "available"
-      }
-    ],
-    "ticketUrl": "https://tickets.waterlanternfestival.com/lasvegas",
-    "eventUrl": "https://www.waterlanternfestival.com/events/las-vegas",
-    "source": "Water Lantern Festival",
-    "sourceUrl": "https://www.waterlanternfestival.com/events/las-vegas",
-    "lastUpdated": "2026-11-08"
-  },
-  {
-    "id": "tempe-2026-11-08",
-    "name": "Water Lantern Festival",
-    "city": "Tempe",
-    "state": "Arizona",
-    "country": "USA",
-    "dates": [
-      {
-        "date": "2026-11-08",
-        "startTime": "3:00 PM",
-        "endTime": null
-      }
-    ],
-    "venue": "Kiwanis Park",
-    "address": "5992 S. All America Way, Tempe, AZ 85283, November 8, 2026",
-    "schedule": [
-      {
-        "time": "3:00",
-        "activity": "Gates Open"
-      },
-      {
-        "time": "3:00 - 7:00",
-        "activity": "Enjoy Food Trucks / Music / Fun"
-      },
-      {
-        "time": "5:30",
-        "activity": "Design your Lantern"
-      },
-      {
-        "time": "6:00 - 7:00",
-        "activity": "Lantern Launch"
-      },
-      {
-        "time": "7:00",
-        "activity": "Event Ends"
-      }
-    ],
-    "tickets": [
-      {
-        "name": "General Admission",
-        "pricing": [
-          {
-            "tier": "Early Bird",
-            "price": 29.99,
-            "currency": "USD",
-            "status": "available"
-          },
-          {
-            "tier": "Regular",
-            "price": 30.99,
-            "currency": "USD",
-            "status": "available"
-          },
-          {
-            "tier": "Last Call",
-            "price": 42.99,
-            "currency": "USD",
-            "status": "available"
-          },
-          {
-            "tier": "At Event",
-            "price": 57.99,
-            "currency": "USD",
-            "status": "available"
-          }
-        ]
-      }
-    ],
-    "ticketUrl": "https://tickets.waterlanternfestival.com/tempefri",
-    "eventUrl": "https://www.waterlanternfestival.com/events/tempe",
-    "source": "Water Lantern Festival",
-    "sourceUrl": "https://www.waterlanternfestival.com/events/tempe",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "san-jose-2026-11-14",
@@ -326,7 +164,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/san-jose",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/san-jose",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "christchurch-2026-11-14",
@@ -349,7 +187,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/christchurch",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/christchurch",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "leeds-2026-11-14",
@@ -372,7 +210,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/leeds",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/leeds",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "sheffield-2026-11-14",
@@ -395,7 +233,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/sheffield",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/sheffield",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "manly-2026-11-16",
@@ -448,7 +286,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/manly",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/manly",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "houston-2026-11-20",
@@ -546,7 +384,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/houston",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/houston",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "sacramento-2026-11-21",
@@ -634,7 +472,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/sacramento",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/sacramento",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "fort-lauderdale-2026-11-21",
@@ -722,7 +560,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/fort-lauderdale",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/fort-lauderdale",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "belo-horizonte-2026-11-21",
@@ -745,7 +583,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/belo-horizonte",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/belo-horizonte",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "portland-2-2026-11-21",
@@ -840,7 +678,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/portland-2",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/portland-2",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "dallas-2026-11-21",
@@ -914,7 +752,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/dallas",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/dallas",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "rio-de-janeiro-2026-12-05",
@@ -937,7 +775,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/rio-de-janeiro",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/rio-de-janeiro",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "fresno-2026-12-05",
@@ -1025,7 +863,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/fresno",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/fresno",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "orange-county-2026-12-05",
@@ -1118,7 +956,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/orange-county",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/orange-county",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "santiago-2026-12-05",
@@ -1141,7 +979,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/santiago",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/santiago",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "fort-worth-2026-12-05",
@@ -1222,7 +1060,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/fort-worth",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/fort-worth",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "los-angeles-2026-12-12",
@@ -1315,7 +1153,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/los-angeles",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/los-angeles",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "san-diego-2026-12-12",
@@ -1408,7 +1246,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/san-diego",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/san-diego",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "san-fernando-valley-2026-12-12",
@@ -1496,7 +1334,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/san-fernando-valley",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/san-fernando-valley",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "el-paso-2026-12-12",
@@ -1570,7 +1408,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/el-paso",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/el-paso",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "san-isidro-2026-12-19",
@@ -1593,7 +1431,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/san-isidro",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/san-isidro",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "bakersfield-2027-02-13",
@@ -1681,7 +1519,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/bakersfield",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/bakersfield",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "dallas-2-2027-02-13",
@@ -1755,7 +1593,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/dallas-2",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/dallas-2",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "columbus-2027-09-06",
@@ -1778,7 +1616,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/columbus",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/columbus",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "macon-2027-09-06",
@@ -1801,7 +1639,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/macon",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/macon",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "auckland-2027-11-14",
@@ -1824,7 +1662,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/auckland",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/auckland",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "brasilia-2027-11-14",
@@ -1847,7 +1685,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/brasilia",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/brasilia",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "goiania-2027-11-14",
@@ -1870,7 +1708,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/goiania",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/goiania",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "curitiba-2027-11-14",
@@ -1893,7 +1731,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/curitiba",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/curitiba",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "porto-alegre-2027-11-14",
@@ -1916,7 +1754,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/porto-alegre",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/porto-alegre",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "campinas-2027-11-14",
@@ -1939,7 +1777,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/campinas",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/campinas",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "ballarat-2029-03-03",
@@ -1962,7 +1800,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/ballarat",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/ballarat",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "bendigo-2029-03-03",
@@ -1985,7 +1823,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/bendigo",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/bendigo",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "victoria-2030-06-07",
@@ -2008,7 +1846,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/victoria",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/victoria",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "st-johns-2030-06-07",
@@ -2031,7 +1869,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/st-johns",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/st-johns",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "halifax-2030-06-07",
@@ -2054,7 +1892,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/halifax",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/halifax",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "oshawa-2030-06-07",
@@ -2077,7 +1915,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/oshawa",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/oshawa",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "st-catharines-niagara-2030-06-07",
@@ -2100,7 +1938,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/st-catharines-niagara",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/st-catharines-niagara",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "windsor-2030-06-07",
@@ -2123,7 +1961,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/windsor",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/windsor",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "montreal-2030-06-07",
@@ -2146,7 +1984,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/montreal",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/montreal",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "quebec-city-2030-06-07",
@@ -2169,7 +2007,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/quebec-city",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/quebec-city",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "sherbrooke-2030-06-07",
@@ -2192,7 +2030,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/sherbrooke",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/sherbrooke",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "regina-2030-06-07",
@@ -2215,7 +2053,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/regina",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/regina",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "saskatoon-2030-06-07",
@@ -2238,7 +2076,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/saskatoon",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/saskatoon",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "find-an-event-coming-soon",
@@ -2255,7 +2093,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/find-an-event",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/find-an-event",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "birmingham-7vrfo-offsite",
@@ -2272,7 +2110,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/birmingham-7vrfo",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/birmingham-7vrfo",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "brussels-offsite",
@@ -2289,7 +2127,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/brussels",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/brussels",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "buenos-aires-offsite",
@@ -2306,7 +2144,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/buenos-aires",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/buenos-aires",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "cologne-offsite",
@@ -2323,7 +2161,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/cologne",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/cologne",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "liverpool-offsite",
@@ -2340,7 +2178,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/liverpool",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/liverpool",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "london-offsite",
@@ -2357,7 +2195,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/london",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/london",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "mexico-city-offsite",
@@ -2374,7 +2212,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/mexico-city",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/mexico-city",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "munich-offsite",
@@ -2391,7 +2229,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/munich",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/munich",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "paris-offsite",
@@ -2408,7 +2246,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/paris",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/paris",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "birmingham-coming-soon",
@@ -2462,7 +2300,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/birmingham",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/birmingham",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -2524,7 +2362,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/huntsville",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/huntsville",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -2549,7 +2387,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/montgomery",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/montgomery",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -2618,7 +2456,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/calgary",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/calgary",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -2694,7 +2532,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/edmonton",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/edmonton",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -2749,7 +2587,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/gilbert",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/gilbert",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -2774,7 +2612,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/lake-havasu",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/lake-havasu",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -2836,7 +2674,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/phoenix-surprise",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/phoenix-surprise",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -2861,7 +2699,62 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/prescott",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/prescott",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
+    "dateStatus": "coming-soon"
+  },
+  {
+    "id": "tempe-coming-soon",
+    "name": "Water Lantern Festival",
+    "city": "Tempe",
+    "state": "Arizona",
+    "country": "USA",
+    "dates": [
+      {
+        "date": null,
+        "startTime": null,
+        "endTime": null,
+        "dateStatus": "coming-soon"
+      }
+    ],
+    "venue": null,
+    "address": null,
+    "schedule": [],
+    "tickets": [
+      {
+        "name": "General Admission",
+        "pricing": [
+          {
+            "tier": "Early Bird",
+            "price": 29.99,
+            "currency": "USD",
+            "status": "available"
+          },
+          {
+            "tier": "Regular",
+            "price": 30.99,
+            "currency": "USD",
+            "status": "available"
+          },
+          {
+            "tier": "Last Call",
+            "price": 42.99,
+            "currency": "USD",
+            "status": "available"
+          },
+          {
+            "tier": "At Event",
+            "price": 57.99,
+            "currency": "USD",
+            "status": "available"
+          }
+        ]
+      }
+    ],
+    "ticketUrl": "https://tickets.waterlanternfestival.com/tempefri",
+    "eventUrl": "https://www.waterlanternfestival.com/events/tempe",
+    "source": "Water Lantern Festival",
+    "sourceUrl": "https://www.waterlanternfestival.com/events/tempe",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -2923,7 +2816,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/tucson",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/tucson",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -2985,7 +2878,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/little-rock",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/little-rock",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -3061,7 +2954,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/vancouver-2",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/vancouver-2",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -3086,7 +2979,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/escondido",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/escondido",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -3155,7 +3048,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/inland-empire",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/inland-empire",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -3217,7 +3110,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/lake-elsinore",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/lake-elsinore",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -3242,7 +3135,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/long-beach",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/long-beach",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -3297,7 +3190,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/oakland",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/oakland",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -3322,7 +3215,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/ontario",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/ontario",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -3384,7 +3277,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/palm-desert",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/palm-desert",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -3453,7 +3346,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/san-francisco",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/san-francisco",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -3478,7 +3371,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/san-leandro",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/san-leandro",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -3503,7 +3396,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/santa-rosa",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/santa-rosa",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -3572,7 +3465,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/simi-valley",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/simi-valley",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -3597,7 +3490,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/stockton",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/stockton",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -3652,7 +3545,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/visalia",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/visalia",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -3714,62 +3607,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/colorado-springs",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/colorado-springs",
-    "lastUpdated": "2026-11-08",
-    "dateStatus": "coming-soon"
-  },
-  {
-    "id": "denver-2-coming-soon",
-    "name": "Water Lantern Festival",
-    "city": "Denver",
-    "state": "Colorado",
-    "country": "USA",
-    "dates": [
-      {
-        "date": null,
-        "startTime": null,
-        "endTime": null,
-        "dateStatus": "coming-soon"
-      }
-    ],
-    "venue": null,
-    "address": null,
-    "schedule": [],
-    "tickets": [
-      {
-        "name": "General Admission",
-        "pricing": [
-          {
-            "tier": "Early Bird",
-            "price": 28.99,
-            "currency": "USD",
-            "status": "available"
-          },
-          {
-            "tier": "Regular",
-            "price": 29.99,
-            "currency": "USD",
-            "status": "available"
-          },
-          {
-            "tier": "Last Call",
-            "price": 30.99,
-            "currency": "USD",
-            "status": "available"
-          },
-          {
-            "tier": "At Event",
-            "price": 42.99,
-            "currency": "USD",
-            "status": "available"
-          }
-        ]
-      }
-    ],
-    "ticketUrl": null,
-    "eventUrl": "https://www.waterlanternfestival.com/events/denver-2",
-    "source": "Water Lantern Festival",
-    "sourceUrl": "https://www.waterlanternfestival.com/events/denver-2",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -3838,7 +3676,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/fort-collins",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/fort-collins",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -3863,7 +3701,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/danbury",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/danbury",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -3925,7 +3763,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/hartford",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/hartford",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -3950,7 +3788,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/new-haven",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/new-haven",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -3975,7 +3813,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/newington",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/newington",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -4001,57 +3839,36 @@
         "pricing": [
           {
             "tier": "Early Bird",
-            "price": 32.99,
+            "price": 30.99,
             "currency": "USD",
             "status": "available"
           },
           {
             "tier": "Regular",
-            "price": 35.99,
+            "price": 34.99,
             "currency": "USD",
             "status": "available"
           },
           {
             "tier": "Last Call",
-            "price": 36.99,
+            "price": 42.99,
             "currency": "USD",
             "status": "available"
           },
           {
             "tier": "At Event",
-            "price": 64.99,
+            "price": 57.99,
             "currency": "USD",
             "status": "available"
           }
         ]
-      },
-      {
-        "name": "VIP",
-        "tier": "VIP Ticket",
-        "price": null,
-        "currency": "USD",
-        "status": "limited"
-      },
-      {
-        "name": "Date Night",
-        "tier": "Date Night Special",
-        "price": 87.99,
-        "currency": "USD",
-        "status": "available"
-      },
-      {
-        "name": "Family/Friends",
-        "tier": "Family Bundle",
-        "price": 28.99,
-        "currency": "USD",
-        "status": "available"
       }
     ],
     "ticketUrl": null,
     "eventUrl": "https://www.waterlanternfestival.com/events/washington-dc",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/washington-dc",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -4076,7 +3893,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/wilmington",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/wilmington",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -4101,7 +3918,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/manchester",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/manchester",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -4126,7 +3943,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/newcastle-2",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/newcastle-2",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -4151,7 +3968,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/nottingham",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/nottingham",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -4176,7 +3993,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/helsinki",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/helsinki",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -4196,12 +4013,42 @@
     "venue": null,
     "address": null,
     "schedule": [],
-    "tickets": [],
-    "ticketUrl": "https://tickets.waterlanternfestival.com/lantern-universal-ticket",
+    "tickets": [
+      {
+        "name": "General Admission",
+        "pricing": [
+          {
+            "tier": "Early Bird",
+            "price": 30.99,
+            "currency": "USD",
+            "status": "available"
+          },
+          {
+            "tier": "Regular",
+            "price": 34.99,
+            "currency": "USD",
+            "status": "available"
+          },
+          {
+            "tier": "Last Call",
+            "price": 42.99,
+            "currency": "USD",
+            "status": "available"
+          },
+          {
+            "tier": "At Event",
+            "price": 57.99,
+            "currency": "USD",
+            "status": "available"
+          }
+        ]
+      }
+    ],
+    "ticketUrl": null,
     "eventUrl": "https://www.waterlanternfestival.com/events/jacksonville",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/jacksonville",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -4263,7 +4110,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/miami",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/miami",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -4288,7 +4135,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/ocala",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/ocala",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -4350,7 +4197,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/orlando",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/orlando",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -4405,7 +4252,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/sarasota",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/sarasota",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -4430,7 +4277,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/spring-hill",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/spring-hill",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -4485,7 +4332,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/tampa",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/tampa",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -4510,7 +4357,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/lyon",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/lyon",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -4535,7 +4382,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/montpellier",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/montpellier",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -4560,7 +4407,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/pont-du-gard",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/pont-du-gard",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -4615,7 +4462,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/atlanta",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/atlanta",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -4684,7 +4531,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/savannah",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/savannah",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -4739,7 +4586,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/south-atlanta",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/south-atlanta",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -4764,7 +4611,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/berlin",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/berlin",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -4819,7 +4666,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/boise",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/boise",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -4874,7 +4721,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/idaho-falls",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/idaho-falls",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -4929,7 +4776,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/aurora",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/aurora",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -4991,7 +4838,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/chicago",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/chicago",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -5053,7 +4900,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/lake-zurich",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/lake-zurich",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -5108,7 +4955,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/lemont",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/lemont",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -5133,7 +4980,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/peoria",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/peoria",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -5158,7 +5005,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/rockford",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/rockford",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -5213,7 +5060,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/fort-wayne",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/fort-wayne",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -5268,7 +5115,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/indianapolis",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/indianapolis",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -5293,7 +5140,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/des-moines",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/des-moines",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -5318,7 +5165,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/milan",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/milan",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -5343,7 +5190,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/turin",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/turin",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -5398,7 +5245,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/wichita",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/wichita",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -5467,7 +5314,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/lexington",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/lexington",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -5529,7 +5376,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/louisville",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/louisville",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -5584,7 +5431,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/baton-rouge",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/baton-rouge",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -5610,36 +5457,36 @@
         "pricing": [
           {
             "tier": "Early Bird",
-            "price": 28.99,
+            "price": 30.99,
             "currency": "USD",
             "status": "available"
           },
           {
             "tier": "Regular",
-            "price": 35.99,
+            "price": 34.99,
             "currency": "USD",
             "status": "available"
           },
           {
             "tier": "Last Call",
-            "price": 45.99,
+            "price": 42.99,
             "currency": "USD",
             "status": "available"
           },
           {
             "tier": "At Event",
-            "price": 55.99,
+            "price": 57.99,
             "currency": "USD",
             "status": "available"
           }
         ]
       }
     ],
-    "ticketUrl": "https://tickets.waterlanternfestival.com/lafayettela",
+    "ticketUrl": "https://tickets.waterlanternfestival.com/lafayette",
     "eventUrl": "https://www.waterlanternfestival.com/events/lafayette",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/lafayette",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -5664,7 +5511,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/lake-charles",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/lake-charles",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -5719,7 +5566,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/new-orleans",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/new-orleans",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -5744,7 +5591,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/portland",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/portland",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -5799,7 +5646,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/winnipeg",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/winnipeg",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -5824,7 +5671,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/baltimore",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/baltimore",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -5900,7 +5747,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/boston",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/boston",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -5925,7 +5772,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/springfield-2",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/springfield-2",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -5980,7 +5827,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/worcester",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/worcester",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -6049,7 +5896,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/ann-arbor",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/ann-arbor",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -6104,7 +5951,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/detroit",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/detroit",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -6159,7 +6006,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/grand-rapids",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/grand-rapids",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -6184,7 +6031,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/lansing",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/lansing",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -6253,7 +6100,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/minneapolis",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/minneapolis",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -6278,7 +6125,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/rochester",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/rochester",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -6303,7 +6150,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/st-cloud",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/st-cloud",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -6372,7 +6219,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/st-paul",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/st-paul",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -6427,7 +6274,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/jackson",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/jackson",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -6452,76 +6299,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/tupelo",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/tupelo",
-    "lastUpdated": "2026-11-08",
-    "dateStatus": "coming-soon"
-  },
-  {
-    "id": "kansas-city-2-coming-soon",
-    "name": "Water Lantern Festival",
-    "city": "Kansas City",
-    "state": "Missouri",
-    "country": "USA",
-    "dates": [
-      {
-        "date": null,
-        "startTime": null,
-        "endTime": null,
-        "dateStatus": "coming-soon"
-      }
-    ],
-    "venue": null,
-    "address": null,
-    "schedule": [],
-    "tickets": [
-      {
-        "name": "General Admission",
-        "pricing": [
-          {
-            "tier": "Early Bird",
-            "price": 30.99,
-            "currency": "USD",
-            "status": "available"
-          },
-          {
-            "tier": "Regular",
-            "price": 32.99,
-            "currency": "USD",
-            "status": "available"
-          },
-          {
-            "tier": "Last Call",
-            "price": 34.99,
-            "currency": "USD",
-            "status": "available"
-          },
-          {
-            "tier": "At Event",
-            "price": 57.99,
-            "currency": "USD",
-            "status": "available"
-          }
-        ]
-      },
-      {
-        "name": "Date Night",
-        "tier": "Date Night Special",
-        "price": 86.99,
-        "currency": "USD",
-        "status": "available"
-      },
-      {
-        "name": "Family/Friends",
-        "tier": "Family Bundle",
-        "price": 28.99,
-        "currency": "USD",
-        "status": "available"
-      }
-    ],
-    "ticketUrl": "https://tickets.waterlanternfestival.com/kansascity",
-    "eventUrl": "https://www.waterlanternfestival.com/events/kansas-city-2",
-    "source": "Water Lantern Festival",
-    "sourceUrl": "https://www.waterlanternfestival.com/events/kansas-city-2",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -6546,7 +6324,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/springfield-3",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/springfield-3",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -6601,7 +6379,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/st-louis",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/st-louis",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -6626,7 +6404,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/lincoln",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/lincoln",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -6651,7 +6429,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/omaha",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/omaha",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -6676,7 +6454,76 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/henderson",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/henderson",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
+    "dateStatus": "coming-soon"
+  },
+  {
+    "id": "las-vegas-coming-soon",
+    "name": "Water Lantern Festival",
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "country": "USA",
+    "dates": [
+      {
+        "date": null,
+        "startTime": null,
+        "endTime": null,
+        "dateStatus": "coming-soon"
+      }
+    ],
+    "venue": null,
+    "address": null,
+    "schedule": [],
+    "tickets": [
+      {
+        "name": "General Admission",
+        "pricing": [
+          {
+            "tier": "Early Bird",
+            "price": 29.99,
+            "currency": "USD",
+            "status": "available"
+          },
+          {
+            "tier": "Regular",
+            "price": 30.99,
+            "currency": "USD",
+            "status": "available"
+          },
+          {
+            "tier": "Last Call",
+            "price": 42.99,
+            "currency": "USD",
+            "status": "available"
+          },
+          {
+            "tier": "At Event",
+            "price": 57.99,
+            "currency": "USD",
+            "status": "available"
+          }
+        ]
+      },
+      {
+        "name": "Date Night",
+        "tier": "Date Night Special",
+        "price": 89.99,
+        "currency": "USD",
+        "status": "available"
+      },
+      {
+        "name": "Family/Friends",
+        "tier": "Family Bundle",
+        "price": 24.99,
+        "currency": "USD",
+        "status": "available"
+      }
+    ],
+    "ticketUrl": "https://tickets.waterlanternfestival.com/lasvegas",
+    "eventUrl": "https://www.waterlanternfestival.com/events/las-vegas",
+    "source": "Water Lantern Festival",
+    "sourceUrl": "https://www.waterlanternfestival.com/events/las-vegas",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -6745,7 +6592,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/reno-sparks",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/reno-sparks",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -6800,7 +6647,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/nynj",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/nynj",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -6855,7 +6702,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/mayslanding",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/mayslanding",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -6880,7 +6727,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/albuquerque",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/albuquerque",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -6935,7 +6782,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/las-cruces",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/las-cruces",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -6953,7 +6800,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/albury-wodonga",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/albury-wodonga",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "central-coast-coming-soon",
@@ -6970,7 +6817,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/central-coast",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/central-coast",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "cronulla-coming-soon",
@@ -7045,7 +6892,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/cronulla",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/cronulla",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -7121,7 +6968,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/mount-annan",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/mount-annan",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -7197,7 +7044,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/newcastle",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/newcastle",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -7252,7 +7099,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/sydney",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/sydney",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -7270,7 +7117,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/wollongong",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/wollongong",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "albany-coming-soon",
@@ -7331,7 +7178,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/albany",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/albany",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -7386,7 +7233,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/buffalo",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/buffalo",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -7455,7 +7302,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/long-island",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/long-island",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -7524,7 +7371,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/queens-new-york",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/queens-new-york",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -7593,7 +7440,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/rochester-2",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/rochester-2",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -7648,7 +7495,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/staten-island",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/staten-island",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -7673,7 +7520,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/syracuse",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/syracuse",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -7749,7 +7596,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/wellington",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/wellington",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -7774,7 +7621,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/charlotte",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/charlotte",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -7799,7 +7646,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/fayetteville-2",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/fayetteville-2",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -7824,7 +7671,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/greensboro",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/greensboro",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -7879,7 +7726,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/piedmont-triad",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/piedmont-triad",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -7904,7 +7751,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/wilmington-2",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/wilmington-2",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -7959,7 +7806,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/winston-salem",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/winston-salem",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -7977,7 +7824,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/darwin",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/darwin",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "cincinnati-coming-soon",
@@ -8001,7 +7848,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/cincinnati",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/cincinnati",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -8063,7 +7910,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/cleveland",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/cleveland",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -8088,7 +7935,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/columbus-2",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/columbus-2",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -8113,7 +7960,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/dayton",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/dayton",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -8175,7 +8022,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/toledo",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/toledo",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -8230,7 +8077,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/oklahoma-city",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/oklahoma-city",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -8292,7 +8139,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/tulsa",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/tulsa",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -8317,7 +8164,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/hamilton",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/hamilton",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -8393,7 +8240,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/kitchener",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/kitchener",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -8462,7 +8309,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/ottawa-gatineau",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/ottawa-gatineau",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -8531,7 +8378,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/toronto",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/toronto",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -8556,7 +8403,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/salem",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/salem",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -8581,7 +8428,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/queenstown",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/queenstown",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -8636,7 +8483,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/allentown-2",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/allentown-2",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -8691,7 +8538,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/harrisburg",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/harrisburg",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -8746,7 +8593,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/philadelphia",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/philadelphia",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -8801,7 +8648,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/pittsburgh",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/pittsburgh",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -8877,7 +8724,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/brisbane",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/brisbane",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -8895,7 +8742,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/cairns",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/cairns",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "gold-coast-coming-soon",
@@ -8970,7 +8817,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/gold-coast",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/gold-coast",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -9046,7 +8893,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/sunshine-coast",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/sunshine-coast",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -9064,7 +8911,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/toowoomba",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/toowoomba",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "townsville-coming-soon",
@@ -9081,7 +8928,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/townsville",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/townsville",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "providence-coming-soon",
@@ -9142,7 +8989,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/providence",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/providence",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -9167,7 +9014,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/sao-paulo",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/sao-paulo",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -9243,7 +9090,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/edinburgh",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/edinburgh",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -9298,7 +9145,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/adelaide",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/adelaide",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -9353,7 +9200,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/myrtle-beach",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/myrtle-beach",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -9378,7 +9225,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/madrid",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/madrid",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -9403,7 +9250,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/zaragoza",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/zaragoza",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -9421,7 +9268,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/hobart",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/hobart",
-    "lastUpdated": "2026-11-08"
+    "lastUpdated": "2026-11-09"
   },
   {
     "id": "launceston-coming-soon",
@@ -9496,7 +9343,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/launceston",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/launceston",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -9551,7 +9398,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/chattanooga",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/chattanooga",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -9620,7 +9467,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/knoxville",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/knoxville",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -9689,7 +9536,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/memphis",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/memphis",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -9758,7 +9605,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/nashville",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/nashville",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -9813,7 +9660,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/amarillo",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/amarillo",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -9868,7 +9715,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/arlington",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/arlington",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -9930,7 +9777,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/austin",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/austin",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -9955,7 +9802,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/corpus-christi",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/corpus-christi",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -10010,7 +9857,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/plano",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/plano",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -10035,7 +9882,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/san-antonio",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/san-antonio",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -10090,7 +9937,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/waco",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/waco",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -10115,7 +9962,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/wichita-falls",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/wichita-falls",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -10170,7 +10017,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/salt-lake-city",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/salt-lake-city",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -10225,7 +10072,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/st-george",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/st-george",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -10280,7 +10127,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/utah-county",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/utah-county",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -10335,7 +10182,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/cranbourne",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/cranbourne",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -10411,7 +10258,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/frankston",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/frankston",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -10487,7 +10334,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/geelong",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/geelong",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -10556,7 +10403,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/melbourne",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/melbourne",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -10632,7 +10479,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/melbourne-cable-park",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/melbourne-cable-park",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -10687,7 +10534,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/newport-news",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/newport-news",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -10749,7 +10596,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/richmond",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/richmond",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -10818,7 +10665,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/virginia-beach",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/virginia-beach",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -10873,7 +10720,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/seattle",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/seattle",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -10928,7 +10775,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/spokane",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/spokane",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -10997,7 +10844,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/tacoma",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/tacoma",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -11052,7 +10899,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/tri-cities",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/tri-cities",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -11077,7 +10924,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/vancouver",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/vancouver",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -11132,7 +10979,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/yakima",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/yakima",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -11208,7 +11055,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/perth",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/perth",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -11263,7 +11110,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/green-bay",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/green-bay",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -11332,7 +11179,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/madison",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/madison",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -11364,13 +11211,13 @@
           },
           {
             "tier": "Regular",
-            "price": 32.99,
+            "price": 34.99,
             "currency": "USD",
             "status": "available"
           },
           {
             "tier": "Last Call",
-            "price": 34.99,
+            "price": 42.99,
             "currency": "USD",
             "status": "available"
           },
@@ -11381,27 +11228,13 @@
             "status": "available"
           }
         ]
-      },
-      {
-        "name": "VIP",
-        "tier": "VIP Ticket",
-        "price": null,
-        "currency": "USD",
-        "status": "limited"
-      },
-      {
-        "name": "Family/Friends",
-        "tier": "Family Bundle",
-        "price": 26.99,
-        "currency": "USD",
-        "status": "available"
       }
     ],
     "ticketUrl": "https://tickets.waterlanternfestival.com/milwaukee",
     "eventUrl": "https://www.waterlanternfestival.com/events/milwaukee",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/milwaukee",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   },
   {
@@ -11456,7 +11289,7 @@
     "eventUrl": "https://www.waterlanternfestival.com/events/oshkosh",
     "source": "Water Lantern Festival",
     "sourceUrl": "https://www.waterlanternfestival.com/events/oshkosh",
-    "lastUpdated": "2026-11-08",
+    "lastUpdated": "2026-11-09",
     "dateStatus": "coming-soon"
   }
 ]
