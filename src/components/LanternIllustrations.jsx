@@ -75,6 +75,9 @@ function LanternIllustrations({ variant = 'home' }) {
       </svg>
       {lanterns.map((lantern) => (
         <div key={lantern.className} className={lantern.className}>
+          <span className="lantern__bloom" aria-hidden="true">
+            <img src={lanternFill} alt="" width={141} height={144} />
+          </span>
           <span className="lantern__glow">
             <img src={lanternFill} alt="" width={141} height={144} />
           </span>

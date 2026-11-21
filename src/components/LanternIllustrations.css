@@ -116,16 +116,66 @@
   overflow: hidden;
 }
 
-/* Safari paints CSS drop-shadow much dimmer than Chrome, so use an SVG
-   blur whose region is large enough for the halo to stay bright. */
-@supports (font: -apple-system-body) {
-  .lantern:hover .lantern__glow {
-    filter: brightness(1.55) saturate(1.25) url('#lantern-hover-glow');
-  }
+.lantern__bloom {
+  display: none;
+}
 
-  .lantern--front:hover .lantern__glow {
-    filter: brightness(1.85) saturate(1.4) url('#lantern-hover-glow-front');
-  }
+/* Safari flattens Chrome's wide drop-shadow. A second lantern, on a larger
+   layer, carries that same glow so the halo can spread past the drawing. */
+html.is-safari .lantern,
+html.is-safari .lantern:hover {
+  transform: none;
+}
+
+html.is-safari .lantern__bloom {
+  position: absolute;
+  inset: -180px;
+  z-index: 0;
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0);
+  transition:
+    opacity 280ms ease-out,
+    transform 500ms ease-out;
+  filter: blur(24px) sepia(0.9) saturate(2.6) brightness(1.2);
+}
+
+html.is-safari .lantern--front .lantern__bloom {
+  filter: blur(28px) sepia(1) saturate(3.2) brightness(1.28);
+}
+
+html.is-safari .lantern__bloom img {
+  position: absolute;
+  top: 180px;
+  left: 180px;
+  width: calc(100% - 360px);
+  height: calc(100% - 360px);
+}
+
+html.is-safari .lantern:hover .lantern__bloom {
+  opacity: 1;
+  transform: translateY(-6px);
+}
+
+html.is-safari .lantern__glow {
+  z-index: 1;
+  transform: translateY(0);
+  will-change: auto;
+  transition:
+    transform 500ms ease-out,
+    filter 280ms ease-out;
+}
+
+html.is-safari .lantern:hover .lantern__glow,
+html.is-safari .lantern--front:hover .lantern__glow {
+  transform: translateY(-6px);
+  animation: none;
+  filter: brightness(1.28) saturate(0.7);
+}
+
+html.is-safari .lantern--front:hover .lantern__glow {
+  filter: brightness(1.38) saturate(0.65);
 }
 
 .lantern--mid img {

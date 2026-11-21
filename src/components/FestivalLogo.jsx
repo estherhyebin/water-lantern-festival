@@ -4,6 +4,9 @@ import './FestivalLogo.css'
 function FestivalLogo() {
   return (
     <a className="festival-logo" href="/" aria-label="Water Lantern Festival home">
+      <span className="festival-logo__glow" aria-hidden="true">
+        <img src={logoHome} alt="" width={110} height={81} />
+      </span>
       <img
         src={logoHome}
         alt="Water Lantern Festival"

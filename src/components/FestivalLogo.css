@@ -20,3 +20,49 @@
   display: block;
   object-fit: contain;
 }
+
+.festival-logo__glow {
+  display: none;
+}
+
+/* Safari clips a transitioning drop-shadow, so fade a second copy of the logo. */
+html.is-safari .festival-logo {
+  position: relative;
+  box-sizing: content-box;
+  padding: 32px;
+  margin: -32px;
+  filter: none;
+  transition: none;
+}
+
+html.is-safari .festival-logo:hover {
+  filter: none;
+}
+
+html.is-safari .festival-logo__glow {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  pointer-events: none;
+  filter:
+    drop-shadow(0 0 6px rgba(255, 244, 211, 0.85))
+    drop-shadow(0 0 14px rgba(255, 245, 183, 0.45));
+  transition: opacity 700ms ease;
+}
+
+html.is-safari .festival-logo:hover .festival-logo__glow {
+  opacity: 1;
+}
+
+html.is-safari .festival-logo__glow img,
+html.is-safari .festival-logo > img {
+  width: 110px;
+  height: 81px;
+}
+
+html.is-safari .festival-logo > img {
+  position: relative;
+  z-index: 1;
+}
