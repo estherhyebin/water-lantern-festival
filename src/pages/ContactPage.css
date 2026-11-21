@@ -47,11 +47,11 @@
   margin: 0;
   color: var(--color-cream);
   font-family: var(--font-serif);
-  font-size: 20px;
+  font-size: var(--text-heading);
   font-style: normal;
-  font-weight: 600;
-  line-height: 20px;
-  letter-spacing: 0.48px;
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-heading);
   font-synthesis: none;
 }
 
@@ -87,11 +87,11 @@
 .contact-field label {
   color: var(--color-cream);
   font-family: var(--font-serif);
-  font-size: 16px;
+  font-size: var(--text-body);
   font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.384px;
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-body);
+  letter-spacing: var(--tracking-body);
   font-synthesis: none;
 }
 
@@ -105,10 +105,10 @@
   color: var(--color-cream);
   caret-color: var(--color-cream);
   font-family: var(--font-serif);
-  font-size: 16px;
+  font-size: var(--text-body);
   font-style: normal;
-  font-weight: 500;
-  letter-spacing: 0.384px;
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-body);
   font-synthesis: none;
   outline: none;
 }
@@ -116,13 +116,13 @@
 .contact-field input {
   height: 24px;
   padding: 0;
-  border-bottom: 0.8px solid var(--color-cream);
+  border-bottom: var(--border-hairline) solid var(--color-cream);
 }
 
 .contact-field textarea {
   height: 196px;
   padding: 12px;
-  border: 0.8px solid var(--color-cream);
+  border: var(--border-hairline) solid var(--color-cream);
   resize: vertical;
 }
 
@@ -135,8 +135,7 @@
 .contact-field input:focus-visible,
 .contact-field textarea:focus-visible {
   text-shadow:
-    0 0 8px rgba(255, 246, 213, 0.35),
-    0 0 16px rgba(255, 246, 213, 0.18);
+    var(--glow-cream-soft);
 }
 
 .contact-field input[aria-invalid='true'],
@@ -150,11 +149,11 @@
   margin: 0;
   color: var(--color-cream);
   font-family: var(--font-serif);
-  font-size: 16px;
+  font-size: var(--text-body);
   font-style: italic;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.384px;
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-body);
+  letter-spacing: var(--tracking-body);
   font-synthesis: none;
 }
 
@@ -167,11 +166,11 @@
   background: transparent;
   color: var(--color-cream);
   font-family: var(--font-serif);
-  font-size: 20px;
+  font-size: var(--text-heading);
   font-style: normal;
-  font-weight: 500;
-  line-height: 20px;
-  letter-spacing: 0.48px;
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-heading);
   font-synthesis: none;
   text-decoration: none;
   cursor: pointer;
@@ -183,8 +182,7 @@
 .contact__submit:focus-visible {
   text-decoration: none;
   text-shadow:
-    0 0 8px rgba(255, 246, 213, 0.55),
-    0 0 16px rgba(255, 246, 213, 0.28);
+    var(--glow-cream);
   outline: none;
 }
 

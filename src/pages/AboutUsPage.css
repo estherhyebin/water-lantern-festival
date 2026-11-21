@@ -50,11 +50,11 @@
   margin: 0;
   color: var(--color-cream);
   font-family: var(--font-serif);
-  font-size: 24px;
+  font-size: var(--text-display);
   font-style: normal;
-  font-weight: 400;
-  line-height: 28px;
-  letter-spacing: 0;
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-display);
+  letter-spacing: var(--tracking-none);
   font-synthesis: none;
 }
 
@@ -63,11 +63,11 @@
   width: 100%;
   color: var(--color-cream);
   font-family: var(--font-serif);
-  font-size: 16px;
+  font-size: var(--text-body);
   font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.384px;
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-body);
+  letter-spacing: var(--tracking-body);
   font-synthesis: none;
 }
 
@@ -88,11 +88,11 @@
   margin: 0;
   color: var(--color-cream);
   font-family: var(--font-serif);
-  font-size: 16px;
+  font-size: var(--text-body);
   font-style: italic;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.384px;
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-body);
+  letter-spacing: var(--tracking-body);
   font-synthesis: none;
   white-space: nowrap;
 }
@@ -102,11 +102,11 @@
   align-items: center;
   color: var(--color-cream);
   font-family: var(--font-serif);
-  font-size: 16px;
+  font-size: var(--text-body);
   font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.384px;
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-body);
+  letter-spacing: var(--tracking-body);
   font-synthesis: none;
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -121,8 +121,7 @@
 .about-us__cta:focus-visible {
   transform: translateX(12px);
   text-shadow:
-    0 0 8px rgba(255, 246, 213, 0.55),
-    0 0 16px rgba(255, 246, 213, 0.28);
+    var(--glow-cream);
   outline: none;
 }
 

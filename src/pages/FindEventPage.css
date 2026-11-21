@@ -98,10 +98,10 @@
   padding: 0;
   background: transparent;
   font-family: var(--font-serif);
-  font-size: 16px;
+  font-size: var(--text-body);
   font-style: normal;
-  font-weight: 400;
-  line-height: 1.35;
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-ratio);
   font-style: normal;
   color: var(--color-cream);
   outline: none;
@@ -150,12 +150,12 @@
   border: 0;
   background: transparent;
   font-family: var(--font-serif);
-  font-size: 20px;
+  font-size: var(--text-heading);
   font-style: normal;
-  font-weight: 100;
+  font-weight: var(--weight-regular);
   font-synthesis: none;
-  line-height: 1.35;
-  letter-spacing: 0;
+  line-height: var(--leading-ratio);
+  letter-spacing: var(--tracking-none);
   color: var(--color-cream);
   text-align: left;
   cursor: pointer;
@@ -169,12 +169,11 @@
 button.find-row:hover {
   transform: translateX(12px);
   text-shadow:
-    0 0 8px rgba(255, 246, 213, 0.55),
-    0 0 16px rgba(255, 246, 213, 0.28);
+    var(--glow-cream);
 }
 
 .find-row--expanded {
-  font-weight: 500;
+  font-weight: var(--weight-medium);
   text-decoration: underline;
   text-underline-offset: 4px;
   text-decoration-thickness: 1px;
@@ -187,7 +186,7 @@ button.find-row.find-row--expanded:hover {
 }
 
 .find-row--active {
-  font-weight: 500;
+  font-weight: var(--weight-medium);
   text-shadow: 0.25px 0.25px 4px #fff9e3;
 }
 
@@ -298,10 +297,10 @@ button.find-row.find-row--muted:hover {
   gap: 8px 16px;
   margin: 0;
   font-family: var(--font-serif);
-  font-size: 16px;
+  font-size: var(--text-body);
   font-style: normal;
-  font-weight: 400;
-  line-height: 1.35;
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-ratio);
   color: var(--color-cream);
 }
 
@@ -316,10 +315,10 @@ button.find-row.find-row--muted:hover {
 .find-tickets__cta {
   margin-top: 12px;
   font-family: var(--font-serif);
-  font-size: 16px;
+  font-size: var(--text-body);
   font-style: normal;
-  font-weight: 500;
-  line-height: 20px;
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-tight);
   color: var(--color-cream);
   text-decoration: underline;
   text-underline-offset: 3px;

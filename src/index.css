@@ -1,8 +1,10 @@
+@import './styles/master.css';
+
 @font-face {
   font-family: 'Libre Caslon Condensed';
   src: url('./assets/fonts/LibreCaslonCondensed-VariableFont_wght.ttf')
     format('truetype');
-  font-weight: 100 900;
+  font-weight: 400 700;
   font-style: normal;
   font-display: swap;
 }
@@ -11,24 +13,9 @@
   font-family: 'Libre Caslon Condensed';
   src: url('./assets/fonts/LibreCaslonCondensed-Italic-VariableFont_wght.ttf')
     format('truetype');
-  font-weight: 100 900;
+  font-weight: 400 700;
   font-style: italic;
   font-display: swap;
-}
-
-:root {
-  --color-cream: #fff6d5;
-  --color-grad-start: #44617b;
-  --color-grad-mid: #2d4142;
-  --color-grad-end: #16160e;
-  --font-serif: 'Libre Caslon Condensed', 'Cormorant Garamond', Georgia,
-    'Times New Roman', serif;
-  --page-pad: 20px;
-  --content-pad-top: 10vh;
-  --content-pad-left: 12vw;
-  --content-gap: 96px;
-  --menu-indent: 112px;
-  --menu-gap: 12px;
 }
 
 *,
@@ -48,7 +35,10 @@ body,
 body {
   font-family: var(--font-serif);
   font-style: italic;
-  font-weight: 100;
+  font-weight: var(--weight-regular);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  letter-spacing: var(--tracking-body);
   font-synthesis: none;
   color: var(--color-cream);
   background: var(--color-grad-end);
@@ -62,5 +52,3 @@ img {
   display: block;
   max-width: none;
 }
-
-

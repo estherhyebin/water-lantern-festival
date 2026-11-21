@@ -20,11 +20,11 @@
   display: inline-flex;
   align-items: center;
   font-family: var(--font-serif);
-  font-size: 16px;
+  font-size: var(--text-body);
   font-style: normal;
-  font-weight: 500;
-  line-height: 20px;
-  letter-spacing: 0;
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-none);
   color: var(--color-cream);
   text-decoration: none; /* prevents default browser underline */
   white-space: nowrap;
@@ -54,8 +54,7 @@
 .navigation__item a:hover {
   transform: translateX(12px);
   text-shadow:
-    0 0 8px rgba(255, 246, 213, 0.55),
-    0 0 16px rgba(255, 246, 213, 0.28);
+    var(--glow-cream);
 }
 
 .navigation__item a:hover::after,

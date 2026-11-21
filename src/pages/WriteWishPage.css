@@ -54,11 +54,11 @@
   margin: 0;
   color: var(--color-cream);
   font-family: var(--font-serif);
-  font-size: 16px;
+  font-size: var(--text-body);
   font-style: italic;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.384px;
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-body);
+  letter-spacing: var(--tracking-body);
   font-synthesis: none;
 }
 
@@ -77,16 +77,16 @@
   margin: 0;
   padding: 6px 0;
   border: 0;
-  border-bottom: 0.8px solid var(--color-cream);
+  border-bottom: var(--border-hairline) solid var(--color-cream);
   border-radius: 0;
   background: transparent;
   color: var(--color-cream);
   font-family: var(--font-serif);
-  font-size: 16px;
+  font-size: var(--text-body);
   font-style: italic;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.384px;
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-body);
+  letter-spacing: var(--tracking-body);
   font-synthesis: none;
   outline: none;
 }
@@ -94,8 +94,7 @@
 .wish-composer__input:focus-visible {
   border-bottom-color: var(--color-cream);
   text-shadow:
-    0 0 8px rgba(255, 246, 213, 0.35),
-    0 0 16px rgba(255, 246, 213, 0.18);
+    var(--glow-cream-soft);
 }
 
 .wish-composer__submit,
@@ -109,11 +108,11 @@
   background: transparent;
   color: var(--color-cream);
   font-family: var(--font-serif);
-  font-size: 16px;
+  font-size: var(--text-body);
   font-style: normal;
-  font-weight: 500;
-  line-height: 20px;
-  letter-spacing: 0.384px;
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-body);
   font-synthesis: none;
   cursor: pointer;
   transform: translateX(0);
@@ -129,8 +128,7 @@
 .wish-modal__close:focus-visible {
   transform: translateX(12px);
   text-shadow:
-    0 0 8px rgba(255, 246, 213, 0.55),
-    0 0 16px rgba(255, 246, 213, 0.28);
+    var(--glow-cream);
   outline: none;
 }
 
@@ -172,10 +170,10 @@
   margin: 0;
   color: var(--color-cream);
   font-family: var(--font-serif);
-  font-size: 24px;
+  font-size: var(--text-display);
   font-style: italic;
-  font-weight: 400;
-  line-height: 28px;
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-display);
   font-synthesis: none;
 }
 

@@ -1,0 +1,56 @@
+/*
+  Master design tokens for the Water Lantern Festival site.
+  Change values here to update type, color, spacing, and shared UI
+  across every page. Page CSS files should use these variables.
+*/
+
+:root {
+  /* Color */
+  --color-cream: #fff6d5;
+  --color-grad-start: #44617b;
+  --color-grad-mid: #2d4142;
+  --color-grad-end: #16160e;
+  --color-wish: #b4c6d8;
+
+  /* Font family */
+  --font-serif: 'Libre Caslon Condensed', 'Cormorant Garamond', Georgia,
+    'Times New Roman', serif;
+
+  /* Type sizes — change these to resize text site-wide */
+  --text-body: 16px;
+  --text-heading: 20px;
+  --text-display: 24px;
+
+  /* Line heights that pair with the type sizes above */
+  --leading-tight: 20px;
+  --leading-body: 24px;
+  --leading-display: 28px;
+  --leading-ratio: 1.35;
+
+  /* Letter spacing */
+  --tracking-none: 0;
+  --tracking-body: 0.384px;
+  --tracking-heading: 0.48px;
+
+  /* Font weights — Libre Caslon Condensed only includes these four,
+     plus the same four as italics (use font-style: italic). */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* Layout */
+  --page-pad: 20px;
+  --content-pad-top: 10vh;
+  --content-pad-left: 12vw;
+  --content-gap: 96px;
+  --menu-indent: 112px;
+  --menu-gap: 12px;
+
+  /* Shared UI */
+  --border-hairline: 0.8px;
+  --glow-cream: 0 0 8px rgba(255, 246, 213, 0.55),
+    0 0 16px rgba(255, 246, 213, 0.28);
+  --glow-cream-soft: 0 0 8px rgba(255, 246, 213, 0.35),
+    0 0 16px rgba(255, 246, 213, 0.18);
+}

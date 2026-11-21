@@ -36,18 +36,17 @@
 .event-detail__maps:focus-visible {
   transform: translateX(12px);
   text-shadow:
-    0 0 8px rgba(255, 246, 213, 0.55),
-    0 0 16px rgba(255, 246, 213, 0.28);
+    var(--glow-cream);
   outline: none;
 }
 
 .event-detail__back {
   gap: 12px;
   padding: 8px 16px 8px 0;
-  font-size: 16px;
+  font-size: var(--text-body);
   font-style: normal;
-  font-weight: 400;
-  line-height: 1.35;
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-ratio);
 }
 
 .event-detail__back-arrow {
@@ -61,10 +60,10 @@
   margin: 0;
   color: var(--color-cream);
   font-family: var(--font-serif);
-  font-size: 24px;
+  font-size: var(--text-display);
   font-style: italic;
-  font-weight: 500;
-  line-height: 28px;
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-display);
   font-synthesis: none;
 }
 
@@ -87,11 +86,11 @@
   margin: 0;
   color: var(--color-cream);
   font-family: var(--font-serif);
-  font-size: 16px;
+  font-size: var(--text-body);
   font-style: italic;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.384px;
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-body);
+  letter-spacing: var(--tracking-body);
   font-synthesis: none;
 }
 
@@ -109,12 +108,12 @@
   align-items: flex-start;
   text-align: left;
   padding: 10px 0;
-  border-bottom: 0.8px solid var(--color-cream);
-  font-size: 16px;
+  border-bottom: var(--border-hairline) solid var(--color-cream);
+  font-size: var(--text-body);
   font-style: italic;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.384px;
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-body);
+  letter-spacing: var(--tracking-body);
   white-space: nowrap;
 }
 
@@ -129,7 +128,7 @@
 }
 
 .event-detail__date-day {
-  font-weight: 600;
+  font-weight: var(--weight-semibold);
   font-style: italic;
 }
 
@@ -139,11 +138,11 @@
 }
 
 .event-detail__maps {
-  font-size: 16px;
+  font-size: var(--text-body);
   font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.384px;
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-body);
+  letter-spacing: var(--tracking-body);
 }
 
 .event-detail__schedule {
@@ -153,7 +152,7 @@
 }
 
 .event-detail__schedule li {
-  line-height: 24px;
+  line-height: var(--leading-body);
 }
 
 @media (max-width: 900px) {

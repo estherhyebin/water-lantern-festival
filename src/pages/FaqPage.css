@@ -37,11 +37,11 @@
   margin: 0;
   color: var(--color-cream);
   font-family: var(--font-serif);
-  font-size: 20px;
+  font-size: var(--text-heading);
   font-style: normal;
-  font-weight: 600;
-  line-height: 20px;
-  letter-spacing: 0.48px;
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-heading);
   font-synthesis: none;
 }
 
@@ -56,7 +56,7 @@
 .faq-item {
   width: 100%;
   padding-bottom: 12px;
-  border-bottom: 0.8px solid var(--color-cream);
+  border-bottom: var(--border-hairline) solid var(--color-cream);
 }
 
 .faq-item__button {
@@ -99,11 +99,11 @@
   max-width: calc(100% - 32px);
   color: var(--color-cream);
   font-family: var(--font-serif);
-  font-size: 16px;
+  font-size: var(--text-body);
   font-style: normal;
-  font-weight: 600;
-  line-height: 20px;
-  letter-spacing: 0.384px;
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-body);
   font-synthesis: none;
   text-decoration: none;
   text-shadow: 0 0 0 transparent;
@@ -124,16 +124,14 @@
 .faq-item--open .faq-item__label {
   transform: translateX(24px);
   text-shadow:
-    0 0 8px rgba(255, 246, 213, 0.55),
-    0 0 16px rgba(255, 246, 213, 0.28);
+    var(--glow-cream);
 }
 
 .faq-item:not(.faq-item--open) .faq-item__button:hover .faq-item__label,
 .faq-item:not(.faq-item--open) .faq-item__button:focus-visible .faq-item__label {
   text-decoration: none;
   text-shadow:
-    0 0 8px rgba(255, 246, 213, 0.55),
-    0 0 16px rgba(255, 246, 213, 0.28);
+    var(--glow-cream);
   transform: translateX(24px);
 }
 
@@ -163,11 +161,11 @@
   padding-left: 24px;
   color: var(--color-cream);
   font-family: var(--font-serif);
-  font-size: 16px;
+  font-size: var(--text-body);
   font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.384px;
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-body);
+  letter-spacing: var(--tracking-body);
   font-synthesis: none;
 }
 
@@ -183,8 +181,7 @@
 .faq-item__answer a:hover,
 .faq-item__answer a:focus-visible {
   text-shadow:
-    0 0 8px rgba(255, 246, 213, 0.55),
-    0 0 16px rgba(255, 246, 213, 0.28);
+    var(--glow-cream);
   outline: none;
 }
 
