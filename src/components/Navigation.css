@@ -22,9 +22,9 @@
   font-family: var(--font-serif);
   font-size: var(--text-body);
   font-style: normal;
-  font-weight: var(--weight-medium);
+  font-weight: var(--weight-regular);
   line-height: var(--leading-tight);
-  letter-spacing: var(--tracking-none);
+  letter-spacing: var(--tracking-body);
   color: var(--color-cream);
   text-decoration: none; /* prevents default browser underline */
   white-space: nowrap;

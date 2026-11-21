@@ -11,7 +11,7 @@
   display: flex;
   flex: 1 0 auto;
   align-items: flex-start;
-  gap: min(126px, 8vw);
+  gap: var(--layout-gap);
   width: 100%;
   padding: var(--content-pad-top) 0 96px var(--content-pad-left);
   overflow: visible;
@@ -28,7 +28,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 59px;
+  gap: var(--stack-gap);
   width: min(451px, 100%);
   overflow: visible;
 }
@@ -49,13 +49,13 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  gap: 39px;
+  gap: var(--list-gap);
   width: 100%;
 }
 
 .faq-item {
   width: 100%;
-  padding-bottom: 12px;
+  padding-bottom: var(--space-3);
   border-bottom: var(--border-hairline) solid var(--color-cream);
 }
 
@@ -63,7 +63,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 16px;
+  gap: var(--space-4);
   width: 100%;
   margin: 0;
   padding: 0;
@@ -95,7 +95,7 @@
 .faq-item__label {
   display: inline-flex;
   align-items: flex-start;
-  gap: 8px;
+  gap: var(--space-2);
   max-width: calc(100% - 32px);
   color: var(--color-cream);
   font-family: var(--font-serif);
@@ -158,7 +158,7 @@
 
 .faq-item__answer p {
   margin: 12px 0 0;
-  padding-left: 24px;
+  padding-left: var(--space-6);
   color: var(--color-cream);
   font-family: var(--font-serif);
   font-size: var(--text-body);
@@ -170,7 +170,7 @@
 }
 
 .faq-item__answer p + p {
-  margin-top: 16px;
+  margin-top: var(--space-4);
 }
 
 .faq-item__answer a {
@@ -195,25 +195,25 @@
 @media (max-width: 900px) {
   .faq__main {
     flex-direction: column;
-    padding: 48px 16px 0;
-    gap: 32px;
+    padding: var(--space-10) var(--space-4) 0;
+    gap: var(--space-8);
   }
 
   .faq__content {
     flex: 1 1 auto;
     width: 100%;
     max-width: 451px;
-    gap: 32px;
+    gap: var(--space-8);
   }
 
   .faq__list {
-    gap: 28px;
+    gap: var(--space-7);
   }
 }
 
 @media (max-width: 420px) {
   .faq-item__answer p {
-    padding-left: 16px;
+    padding-left: var(--space-4);
   }
 
   .faq-item--open .faq-item__label,

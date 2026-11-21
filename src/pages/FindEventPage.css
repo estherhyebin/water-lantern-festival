@@ -13,7 +13,7 @@
   display: flex;
   flex: 1 1 auto;
   align-items: flex-start;
-  gap: min(126px, 8vw);
+  gap: var(--layout-gap);
   min-height: 0;
   width: 100%;
   padding: var(--content-pad-top) 0 0 var(--content-pad-left);
@@ -56,8 +56,8 @@
   overflow-y: auto;
   overscroll-behavior: contain;
   padding-top: calc(var(--page-pad) + var(--content-pad-top));
-  padding-right: 24px;
-  padding-bottom: 96px;
+  padding-right: var(--space-6);
+  padding-bottom: var(--section-pad-bottom);
   scrollbar-width: none;
 }
 
@@ -73,7 +73,7 @@
   display: flex;
   align-items: center;
   width: 254px;
-  padding: 8px 16px 8px 4px;
+  padding: var(--space-2) var(--space-4) var(--space-2) var(--space-1);
   border-bottom: 1px solid rgba(255, 246, 213, 0.25);
   border-radius: 2px;
   background: linear-gradient(
@@ -133,8 +133,8 @@
   overflow-x: hidden;
   overflow-y: auto;
   padding-top: calc(17px + 1.35 * 16px + var(--find-list-gap));
-  padding-right: 48px;
-  padding-bottom: 120px;
+  padding-right: var(--space-10);
+  padding-bottom: calc(var(--space-12) + var(--space-6));
   scrollbar-width: none;
 }
 
@@ -197,11 +197,11 @@ button.find-row.find-row--expanded:hover {
 }
 
 .find-state--expanded {
-  padding-left: 24px;
+  padding-left: var(--space-6);
 }
 
 .find-row--country.find-row--expanded {
-  padding-left: 24px;
+  padding-left: var(--space-6);
 }
 
 .find-state__cities {
@@ -221,8 +221,8 @@ button.find-row.find-row--expanded:hover {
 .find-state__cities-inner {
   min-height: 0;
   overflow: hidden;
-  margin-right: -48px;
-  padding-right: 48px;
+  margin-right: calc(-1 * var(--space-10));
+  padding-right: var(--space-10);
 }
 
 .find-row--city {
@@ -249,7 +249,7 @@ button.find-row--city:hover::after {
 }
 
 .find-state .find-row--city {
-  padding-left: 24px;
+  padding-left: var(--space-6);
 }
 
 .find-state:not(.find-state--expanded) .find-row--city {
@@ -257,7 +257,7 @@ button.find-row--city:hover::after {
 }
 
 .find-event__group + .find-event__group {
-  margin-top: 20px;
+  margin-top: var(--space-5);
 }
 
 .find-row--muted,
@@ -286,15 +286,15 @@ button.find-row.find-row--muted:hover {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 8px;
+  gap: var(--space-2);
   width: 100%;
-  margin-top: 20px;
+  margin-top: var(--space-5);
 }
 
 .find-ticket {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 16px;
+  gap: var(--space-2) var(--space-4);
   margin: 0;
   font-family: var(--font-serif);
   font-size: var(--text-body);
@@ -313,7 +313,7 @@ button.find-row.find-row--muted:hover {
 }
 
 .find-tickets__cta {
-  margin-top: 12px;
+  margin-top: var(--space-3);
   font-family: var(--font-serif);
   font-size: var(--text-body);
   font-style: normal;
@@ -340,8 +340,8 @@ button.find-row.find-row--muted:hover {
 @media (max-width: 900px) {
   .find-event__main {
     flex-direction: column;
-    padding: 48px 16px 0;
-    gap: 32px;
+    padding: var(--space-10) var(--space-4) 0;
+    gap: var(--space-8);
   }
 
   .find-event:has(.find-event__browser--detail) .find-event__main {
@@ -368,10 +368,10 @@ button.find-row.find-row--muted:hover {
 
   .find-state--expanded,
   .find-row--country.find-row--expanded {
-    padding-left: 16px;
+    padding-left: var(--space-4);
   }
 
   .find-state .find-row--city {
-    padding-left: 16px;
+    padding-left: var(--space-4);
   }
 }

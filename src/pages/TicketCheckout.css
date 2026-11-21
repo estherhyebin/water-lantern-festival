@@ -4,9 +4,9 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  gap: 40px;
+  gap: var(--space-9);
   width: min(640px, 100%);
-  padding-bottom: 96px;
+  padding-bottom: var(--section-pad-bottom);
 }
 
 .ticket-checkout__back,
@@ -51,8 +51,8 @@
 }
 
 .ticket-checkout__back {
-  gap: 12px;
-  padding: 8px 16px 8px 0;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-4) var(--space-2) 0;
   line-height: var(--leading-ratio);
   letter-spacing: var(--tracking-none);
   align-self: flex-start;
@@ -82,7 +82,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 24px;
+  gap: var(--space-6);
   width: 100%;
 }
 
@@ -90,7 +90,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 4px;
+  gap: var(--space-1);
   min-width: 0;
   max-width: 360px;
 }
@@ -115,7 +115,7 @@
 .ticket-offer__buy {
   display: flex;
   align-items: flex-start;
-  gap: 20px;
+  gap: var(--space-5);
   flex-shrink: 0;
 }
 
@@ -123,12 +123,12 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 8px;
+  gap: var(--space-2);
 }
 
 .ticket-checkout__total {
   display: flex;
-  gap: 8px;
+  gap: var(--space-2);
   font-style: normal;
 }
 
@@ -149,7 +149,7 @@
 .ticket-pay__form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--space-4);
   width: min(360px, 100%);
 }
 
@@ -157,7 +157,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 4px;
+  gap: var(--space-1);
 }
 
 .ticket-pay__label {
@@ -167,7 +167,7 @@
 .ticket-pay__input {
   width: 100%;
   margin: 0;
-  padding: 6px 0;
+  padding: var(--space-2) 0;
   border: 0;
   border-bottom: 1px solid rgba(255, 246, 213, 0.45);
   border-radius: 0;
@@ -190,7 +190,7 @@
 
 .ticket-pay__row {
   display: flex;
-  gap: 24px;
+  gap: var(--space-6);
   width: 100%;
 }
 
@@ -202,7 +202,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 8px;
+  gap: var(--space-2);
 }
 
 @media (max-width: 900px) {
@@ -215,11 +215,11 @@
 
   .ticket-offer {
     flex-direction: column;
-    gap: 12px;
+    gap: var(--space-3);
   }
 
   .ticket-pay__row {
     flex-direction: column;
-    gap: 16px;
+    gap: var(--space-4);
   }
 }

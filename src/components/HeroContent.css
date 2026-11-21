@@ -8,11 +8,11 @@
 .hero-content p {
   font-family: var(--font-serif);
   font-size: var(--text-body);
-  font-style: italic;
+  font-style: normal;
   font-weight: var(--weight-regular);
   font-synthesis: none;
   line-height: var(--leading-body);
-  letter-spacing: var(--tracking-none);
+  letter-spacing: var(--tracking-body);
   color: var(--color-cream);
   white-space: pre-line;
 }

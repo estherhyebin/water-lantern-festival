@@ -4,38 +4,38 @@ import { drawRipple } from './rippleDraw.js'
 
 const RIPPLE_SOURCES = [
   {
-    selector: '.lantern--mid img',
-    lifetime: 4,
+    selector: '.lantern--mid .lantern__glow img',
+    lifetime: 4.6,
     scale: 0.75,
     fadeStart: 0.85,
-    opacity: 190,
+    opacity: 60,
     flatten: 0.19,
     seed: 210,
-    spawnInterval: 1300,
-    spawnOffset: 600,
+    spawnInterval: 3400,
+    spawnOffset: 1400,
     originY: -10,
   },
   {
-    selector: '.lantern--back img',
-    lifetime: 4,
+    selector: '.lantern--back .lantern__glow img',
+    lifetime: 5.2,
     scale: 0.50,
     fadeStart: 0.85,
-    opacity: 125,
+    opacity: 30,
     flatten: 0.19,
     seed: 640,
-    spawnInterval: 1200,
-    spawnOffset: 800,
+    spawnInterval: 4100,
+    spawnOffset: 2700,
     originY: -5,
   },
   {
-    selector: '.lantern--front img',
+    selector: '.lantern--front .lantern__glow img',
     lifetime: 5,
     scale: 0.90,
     fadeStart: 0.85,
-    opacity: 220,
+    opacity: 200,
     flatten: 0.21,
     seed: 980,
-    spawnInterval: 1000,
+    spawnInterval: 2800,
     spawnOffset: 0,
     originY: -10,
   },
@@ -87,10 +87,14 @@ export default function AsciiRipple() {
 
             if (!img) return null
 
+            const rect = img.getBoundingClientRect()
+            // Skip hidden bloom copies and unloaded images.
+            if (rect.width < 8 || rect.height < 8) return null
+
             return {
               source,
               img,
-              rect: img.getBoundingClientRect(),
+              rect,
             }
           })
           .filter(Boolean)
@@ -101,7 +105,7 @@ export default function AsciiRipple() {
           lanterns.find(
             (item) =>
               item.source.selector ===
-              '.lantern--back img',
+              '.lantern--back .lantern__glow img',
           )?.rect.width ??
           lanterns[0].rect.width
 

@@ -12,7 +12,7 @@
   display: flex;
   flex: 1 1 auto;
   align-items: flex-start;
-  gap: min(126px, 8vw);
+  gap: var(--layout-gap);
   min-height: 0;
   width: 100%;
   padding: var(--content-pad-top) 0 0 var(--content-pad-left);
@@ -28,11 +28,11 @@
   flex-direction: column;
   align-items: flex-start;
   align-self: stretch;
-  gap: 59px;
+  gap: var(--stack-gap);
   width: min(572px, 100%);
   min-height: 0;
   margin: 0;
-  padding-bottom: 96px;
+  padding-bottom: var(--section-pad-bottom);
   overflow-x: hidden;
   overflow-y: auto;
   overscroll-behavior: contain;
@@ -59,14 +59,14 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 40px;
+  gap: var(--space-9);
   width: 100%;
 }
 
 .contact__row {
   display: flex;
   align-items: flex-start;
-  gap: 20px;
+  gap: var(--space-5);
   width: 100%;
 }
 
@@ -75,7 +75,7 @@
   flex: 1 1 0;
   flex-direction: column;
   align-items: flex-start;
-  gap: 8px;
+  gap: var(--space-2);
   min-width: 0;
 }
 
@@ -121,7 +121,7 @@
 
 .contact-field textarea {
   height: 196px;
-  padding: 12px;
+  padding: var(--space-3);
   border: var(--border-hairline) solid var(--color-cream);
   resize: vertical;
 }
@@ -194,23 +194,23 @@
 @media (max-width: 900px) {
   .contact__main {
     flex-direction: column;
-    padding: 48px 16px 0;
-    gap: 32px;
+    padding: var(--space-10) var(--space-4) 0;
+    gap: var(--space-8);
   }
 
   .contact__content {
     flex: 1 1 auto;
     width: 100%;
     max-width: 572px;
-    gap: 32px;
+    gap: var(--space-8);
   }
 
   .contact__fields {
-    gap: 28px;
+    gap: var(--space-7);
   }
 
   .contact__row {
     flex-direction: column;
-    gap: 28px;
+    gap: var(--space-7);
   }
 }

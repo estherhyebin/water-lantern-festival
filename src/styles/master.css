@@ -29,7 +29,7 @@
 
   /* Letter spacing */
   --tracking-none: 0;
-  --tracking-body: 0.384px;
+  --tracking-body: .32px;
   --tracking-heading: 0.48px;
 
   /* Font weights — Libre Caslon Condensed only includes these four,
@@ -39,13 +39,31 @@
   --weight-semibold: 600;
   --weight-bold: 700;
 
-  /* Layout */
-  --page-pad: 20px;
+  /* Spacing scale — use for gaps, padding, and margins */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-9: 40px;
+  --space-10: 48px;
+  --space-11: 64px;
+  --space-12: 96px;
+
+  /* Layout — page chrome and shared section spacing */
+  --page-pad: var(--space-5);
   --content-pad-top: 10vh;
   --content-pad-left: 12vw;
-  --content-gap: 96px;
+  --content-gap: var(--space-12);
   --menu-indent: 112px;
-  --menu-gap: 12px;
+  --menu-gap: var(--space-3);
+  --layout-gap: min(126px, 8vw);
+  --stack-gap: 59px;
+  --list-gap: 39px;
+  --section-pad-bottom: var(--space-12);
 
   /* Shared UI */
   --border-hairline: 0.8px;

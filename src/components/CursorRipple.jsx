@@ -75,7 +75,7 @@ export default function CursorRipple() {
     const instance = new p5(sketch, host)
 
     function lanternBaseWidth() {
-      const img = document.querySelector('.lantern--back img')
+      const img = document.querySelector('.lantern--back .lantern__glow img')
       if (!img) return 160
       return img.getBoundingClientRect().width || 160
     }

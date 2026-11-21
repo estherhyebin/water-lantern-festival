@@ -17,7 +17,7 @@
   display: flex;
   flex: 1 1 auto;
   align-items: flex-start;
-  gap: min(126px, 8vw);
+  gap: var(--layout-gap);
   min-height: 0;
   width: 100%;
   padding: var(--content-pad-top) 0 100px var(--content-pad-left);
@@ -41,7 +41,7 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  gap: 8px;
+  gap: var(--space-2);
   width: min(559px, 100%);
   margin-top: auto;
   align-self: stretch;
@@ -65,7 +65,7 @@
 .wish-composer__row {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: var(--space-5);
   width: 100%;
 }
 
@@ -75,7 +75,7 @@
   max-width: 480px;
   height: 32px;
   margin: 0;
-  padding: 6px 0;
+  padding: var(--space-2) 0;
   border: 0;
   border-bottom: var(--border-hairline) solid var(--color-cream);
   border-radius: 0;
@@ -146,7 +146,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 24px;
+  padding: var(--space-6);
   background: rgba(22, 22, 14, 0.42);
 }
 
@@ -154,9 +154,9 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
+  gap: var(--space-4);
   width: min(420px, 100%);
-  padding: 28px 8px;
+  padding: var(--space-7) var(--space-2);
   background: linear-gradient(
     180deg,
     var(--color-grad-start) 0%,
@@ -180,8 +180,8 @@
 @media (max-width: 900px) {
   .write-wish__chrome {
     flex-direction: column;
-    padding: 48px 16px 32px;
-    gap: 32px;
+    padding: var(--space-10) var(--space-4) var(--space-8);
+    gap: var(--space-8);
   }
 
   .wish-composer {
@@ -192,7 +192,7 @@
 
   .wish-composer__row {
     flex-wrap: wrap;
-    gap: 12px;
+    gap: var(--space-3);
   }
 
   .wish-composer__input {
