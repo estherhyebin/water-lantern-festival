@@ -59,8 +59,8 @@
   --content-pad-left: 12vw;
   --content-gap: var(--space-12);
   --menu-indent: 112px;
-  --menu-gap: var(--space-3);
-  --layout-gap: min(126px, 8vw);
+  --menu-gap: var(--space-2);
+  --layout-gap: 200px;
   --stack-gap: 59px;
   --list-gap: 39px;
   --section-pad-bottom: var(--space-12);

@@ -10,6 +10,8 @@ const homeLanterns = [
 const findLanterns = [
   { className: 'lantern lantern--back' },
   { className: 'lantern lantern--front' },
+  { className: 'lantern lantern--right-back' },
+  { className: 'lantern lantern--right-front' },
 ]
 
 function LanternIllustrations({ variant = 'home' }) {

@@ -1,13 +1,27 @@
+/*
+  Lantern illustrations
+  ---------------------
+  HOME PAGE  → uses .lanterns + .lantern--back / --mid / --front (3 lanterns)
+  FIND EVENT → .lantern--back / --front (left edge) +
+               .lantern--right-back / --right-front (right edge, overlapping)
+  Shared glow, hover, float, and Safari bloom styles apply to both.
+*/
+
+/* ========== HOME PAGE — stage + per-lantern placement ========== */
+/* Edit .lanterns for the whole group; edit --back / --mid / --front for each. */
 .lanterns {
   position: absolute;
-  right: 16vw;
-  top: 60vh;
+  right: auto;
+  left: 68vw;
+  top: auto;
+  bottom: 12vh;
   width: 240px;
   height: 240px;
   pointer-events: none;
   z-index: 3;
 }
 
+/* Shared lantern chrome (home + find) */
 .lantern {
   position: absolute;
   overflow: visible;
@@ -55,12 +69,13 @@
   will-change: transform;
 }
 
+/* HOME — back lantern (farthest / smallest) */
 .lantern--back {
-  bottom: 30%;
-  left: 68%;
+  bottom: 32%;
+  left: 64%;
   width: 40%;
   height: 40%;
-  opacity: 0.5;
+  opacity: 0.48;
 }
 
 .lantern--back .lantern__glow {
@@ -68,12 +83,13 @@
   animation-delay: -2.3s;
 }
 
+/* HOME only — mid lantern (find event page does not render this one) */
 .lantern--mid {
   bottom: 20%;
   left: 24%;
   width: 44%;
   height: 44%;
-  opacity: 0.75;
+  opacity: 0.72;
 }
 
 .lantern--mid .lantern__glow {
@@ -81,9 +97,10 @@
   animation-delay: -1.1s;
 }
 
+/* HOME — front lantern (closest / largest) */
 .lantern--front {
   bottom: 0%;
-  left: 50%;
+  left: 48%;
   width: 48%;
   height: 48%;
 }
@@ -95,7 +112,9 @@
 
 .lantern--back:hover,
 .lantern--mid:hover,
-.lantern--front:hover {
+.lantern--front:hover,
+.lantern--right-back:hover,
+.lantern--right-front:hover {
   opacity: 1;
 }
 
@@ -178,6 +197,7 @@ html.is-safari .lantern--front:hover .lantern__glow {
   filter: brightness(1.38) saturate(0.65);
 }
 
+/* Shared float motion (home + find) */
 .lantern--mid img {
   animation: lantern-float-mid 12s cubic-bezier(0.37, 0, 0.63, 1) infinite;
   animation-delay: -4.1s;
@@ -193,51 +213,129 @@ html.is-safari .lantern--front:hover .lantern__glow {
   animation-delay: -2.2s;
 }
 
+/* FIND — right-side lanterns (glow + float; placement under .lanterns--find) */
+.lantern--right-back .lantern__glow {
+  animation: lantern-glow-mid 3.6s ease-in-out infinite;
+  animation-delay: -1.1s;
+}
+
+.lantern--right-back img {
+  animation: lantern-float-mid 12s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  animation-delay: -4.1s;
+}
+
+.lantern--right-front .lantern__glow {
+  animation: lantern-glow-front 7.2s ease-in-out infinite;
+  animation-delay: -3.8s;
+}
+
+.lantern--right-front img {
+  animation: lantern-float-front 16.8s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  animation-delay: -2.2s;
+}
+
+/* ========== FIND AN EVENT PAGE — full-page anchors ========== */
+/* Left pair: edit `left`. Right pair: edit `right` (they overlap).
+   Right-front bottom aligns to the Contact nav link; right-back keeps
+   --find-right-stack-offset above it. */
 .lanterns--find {
   position: fixed;
   inset: 0;
   width: auto;
   height: auto;
   pointer-events: none;
+  /* Contact link bottom: page pad + content pad + logo + nav strides */
+  --find-nav-contact-bottom: calc(
+    var(--page-pad) + var(--content-pad-top) + 81px +
+      ((var(--leading-body) - var(--leading-tight)) / 2) +
+      4 * (var(--leading-body) + var(--menu-gap)) + var(--leading-tight)
+  );
+  /* Float animation lifts the drawing up to ~15px; nudge the box down so
+     the visible lantern bottom meets Contact through the float cycle. */
+  --find-right-float-compensate: 24px;
+  --find-right-front-bottom: calc(
+    100vh - var(--find-nav-contact-bottom) - var(--find-right-float-compensate)
+  );
+  /* How much higher right-back sits than right-front */
+  --find-right-stack-offset: 48px;
 }
 
 .lanterns--find .lantern {
   pointer-events: none;
 }
 
+/* FIND — back lantern (anchored from left edge) */
 .lanterns--find .lantern--back {
   top: auto;
+  right: auto;
   bottom: 18vh;
-  left: auto;
-  right: 8vw;
-  width: 117px;
-  height: 120px;
-  opacity: 0.75;
+  left: 12vw;
+  width: calc(240px * 0.40);
+  height: calc(240px * 0.40);
+  opacity: 0.64;
 }
 
+/* FIND — front lantern (anchored from left edge) */
 .lanterns--find .lantern--front {
   top: auto;
+  right: auto;
   bottom: 12vh;
-  left: auto;
-  right: 3vw;
-  width: 128px;
-  height: 131px;
+  left: 15vw;
+  width: calc(240px * 0.44);
+  height: calc(240px * 0.44);
 }
 
+/* FIND — right back (farther / behind on the right) */
+.lanterns--find .lantern--right-back {
+  top: auto;
+  left: auto;
+  bottom: calc(var(--find-right-front-bottom) + var(--find-right-stack-offset));
+  right: 12vw;
+  width: calc(240px * 0.40);
+  height: calc(240px * 0.40);
+  opacity: 0.48;
+  z-index: 1;
+}
+
+/* FIND — right front (overlaps right-back; bottom = Contact) */
+.lanterns--find .lantern--right-front {
+  top: auto;
+  left: auto;
+  bottom: var(--find-right-front-bottom);
+  right: 14vw;
+  width: calc(240px * 0.44);
+  height: calc(240px * 0.44);
+  z-index: 2;
+}
+
+/* Ticket checkout: keep all lanterns on the left */
 .lanterns--checkout {
   z-index: 1;
 }
 
 .lanterns--checkout .lantern--back {
-  left: 3vw;
-  right: auto;
-}
-
-.lanterns--checkout .lantern--front {
   left: 8vw;
   right: auto;
 }
 
+.lanterns--checkout .lantern--front {
+  left: 14vw;
+  right: auto;
+}
+
+.lanterns--checkout .lantern--right-back {
+  left: 10vw;
+  right: auto;
+  bottom: 18vh;
+}
+
+.lanterns--checkout .lantern--right-front {
+  left: 16vw;
+  right: auto;
+  bottom: 14vh;
+}
+
+/* Write a wish: keep all lanterns on the left */
 .lanterns--wish {
   z-index: 0;
 }
@@ -256,18 +354,32 @@ html.is-safari .lantern--front:hover .lantern__glow {
   opacity: 0.55;
 }
 
+.lanterns--wish .lantern--right-back {
+  left: 6vw;
+  right: auto;
+  bottom: 9vh;
+  opacity: 0.45;
+}
+
+.lanterns--wish .lantern--right-front {
+  left: 12vw;
+  right: auto;
+  bottom: 7vh;
+  opacity: 0.5;
+}
+
 @media (max-width: 900px) {
   .lanterns--find .lantern--back,
-  .lanterns--find .lantern--front {
-    width: 88px;
-    height: 90px;
+  .lanterns--find .lantern--front,
+  .lanterns--find .lantern--right-back,
+  .lanterns--find .lantern--right-front {
     opacity: 0.45;
   }
 
   .lanterns--checkout .lantern--back,
-  .lanterns--checkout .lantern--front {
-    left: 4vw;
-    right: auto;
+  .lanterns--checkout .lantern--front,
+  .lanterns--checkout .lantern--right-back,
+  .lanterns--checkout .lantern--right-front {
     opacity: 0.32;
   }
 }
