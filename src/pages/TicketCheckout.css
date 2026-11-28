@@ -105,7 +105,7 @@
   color: var(--color-cream);
   font-family: var(--font-serif);
   font-size: var(--text-body);
-  font-style: italic;
+  font-style: normal;
   font-weight: var(--weight-regular);
   line-height: var(--leading-body);
   letter-spacing: var(--tracking-body);
@@ -142,7 +142,7 @@
 }
 
 .ticket-checkout__hint {
-  font-style: italic;
+  font-style: normal;
   opacity: 0.8;
 }
 
@@ -161,7 +161,7 @@
 }
 
 .ticket-pay__label {
-  font-style: italic;
+  font-style: normal;
 }
 
 .ticket-pay__input {
@@ -175,7 +175,7 @@
   color: var(--color-cream);
   font-family: var(--font-serif);
   font-size: var(--text-body);
-  font-style: italic;
+  font-style: normal;
   font-weight: var(--weight-regular);
   line-height: var(--leading-body);
   font-synthesis: none;
@@ -195,7 +195,7 @@
 }
 
 .ticket-pay__summary {
-  font-style: italic;
+  font-style: normal;
 }
 
 .ticket-confirm__actions {

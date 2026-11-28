@@ -42,11 +42,13 @@
 
 .event-detail__back {
   gap: var(--space-3);
-  padding: var(--space-2) var(--space-4) var(--space-2) 0;
+  padding: 0 var(--space-4) 0 0;
+  border-color: var(--color-cream);
+  color: var(--color-cream);
   font-size: var(--text-body);
   font-style: normal;
   font-weight: var(--weight-regular);
-  line-height: var(--leading-ratio);
+  line-height: var(--text-heading);
 }
 
 .event-detail__back-arrow {
@@ -60,11 +62,25 @@
   margin: 0;
   color: var(--color-cream);
   font-family: var(--font-serif);
-  font-size: var(--text-display);
-  font-style: italic;
-  font-weight: var(--weight-medium);
-  line-height: var(--leading-display);
+  font-style: normal;
+  font-weight: var(--weight-semibold);
   font-synthesis: none;
+}
+
+.event-detail__place {
+  font-size: var(--text-display);
+  line-height: var(--leading-display);
+  /* Align place bottom with “Find an event” nav link bottom.
+     Target = logo (81) + link inset + link height, minus back control + flex gap + place height. */
+  margin-top: calc(
+    81px + ((var(--leading-body) - var(--leading-tight)) / 2) +
+      var(--leading-tight) - 22px - var(--space-9) - var(--leading-display)
+  );
+}
+
+.event-detail__heading {
+  font-size: var(--text-body);
+  line-height: var(--leading-display);
 }
 
 .event-detail__section {
@@ -87,17 +103,21 @@
   color: var(--color-cream);
   font-family: var(--font-serif);
   font-size: var(--text-body);
-  font-style: italic;
+  font-style: normal;
   font-weight: var(--weight-regular);
   line-height: var(--leading-body);
   letter-spacing: var(--tracking-body);
   font-synthesis: none;
 }
 
+.event-detail__lede {
+  line-height: var(--text-body);
+}
+
 .event-detail__dates {
   display: flex;
   flex-wrap: wrap;
-  gap: 36px;
+  gap: var(--space-10);
   align-items: flex-start;
   margin-top: 4px;
 }
@@ -110,7 +130,7 @@
   padding: 10px 0;
   border-bottom: var(--border-hairline) solid var(--color-cream);
   font-size: var(--text-body);
-  font-style: italic;
+  font-style: normal;
   font-weight: var(--weight-regular);
   line-height: var(--leading-body);
   letter-spacing: var(--tracking-body);
@@ -128,8 +148,8 @@
 }
 
 .event-detail__date-day {
-  font-weight: var(--weight-semibold);
-  font-style: italic;
+  font-weight: var(--weight-bold);
+  font-style: normal;
 }
 
 .event-detail__address {

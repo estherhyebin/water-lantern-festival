@@ -60,7 +60,8 @@
   --content-gap: var(--space-12);
   --menu-indent: 112px;
   --menu-gap: var(--space-2);
-  --layout-gap: 200px;
+  /* Scales with viewport; ~200px on wide screens, tighter on small ones */
+  --layout-gap: clamp(64px, 18vw, 200px);
   --stack-gap: 59px;
   --list-gap: 39px;
   --section-pad-bottom: var(--space-12);
